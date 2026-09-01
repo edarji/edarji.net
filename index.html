@@ -1,15 +1,187 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eduardo ArJi</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0b0b" />
+    <meta
+      name="description"
+      content="Eduardo ArJi — tecnología, inteligencia artificial, música y aprendizaje continuo."
+    />
+    <meta property="og:title" content="Eduardo ArJi" />
+    <meta
+      property="og:description"
+      content="Tecnología, inteligencia artificial, música y aprendizaje continuo."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://edarji.net/" />
+    <meta property="og:image" content="https://edarji.net/assets/eduardo-saxofon.jpeg" />
+    <title>Eduardo ArJi — Tecnología, IA y música</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-<body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#inicio" aria-label="Eduardo ArJi, inicio">
+        <span>EA</span><i aria-hidden="true"></i>
+      </a>
 
-  <h1>Eduardo ArJi</h1>
-  <p>Tecnología, IA, música y aprendizaje continuo.</p>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Abrir menú</span>
+        <span></span><span></span>
+      </button>
 
-</body>
+      <nav id="site-nav" class="site-nav" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#intereses">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <section id="inicio" class="hero section-shell" aria-labelledby="hero-title">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span></span> Explorando lo que viene</p>
+          <h1 id="hero-title">Tecnología,<br /><em>ideas</em> y ritmo.</h1>
+          <p class="hero-intro">
+            Soy <strong>Eduardo ArJi</strong>. Aprendo, experimento y comparto en la intersección
+            entre la inteligencia artificial, la tecnología y la música.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#intereses">Descubrir mi mundo <span>↘</span></a>
+            <a class="text-link" href="#sobre-mi">Conóceme <span>→</span></a>
+          </div>
+        </div>
+
+        <figure class="hero-visual reveal" data-delay="1">
+          <div class="image-frame">
+            <img
+              src="assets/eduardo-saxofon.jpeg"
+              alt="Eduardo sentado, interpretando el saxofón"
+              width="1024"
+              height="1536"
+            />
+          </div>
+          <figcaption>
+            <span>01</span>
+            <p>La creatividad también<br />se entrena.</p>
+          </figcaption>
+        </figure>
+
+        <p class="scroll-cue" aria-hidden="true"><span></span> Desplázate para explorar</p>
+      </section>
+
+      <section id="sobre-mi" class="about section-shell" aria-labelledby="about-title">
+        <div class="section-number reveal">02 / Sobre mí</div>
+        <div class="about-content">
+          <h2 id="about-title" class="reveal">Curiosidad como<br /><em>forma de vida.</em></h2>
+          <div class="about-text reveal" data-delay="1">
+            <!-- EDITAR: sustituye estos párrafos por tu historia personal. -->
+            <p>
+              Me mueve entender cómo funcionan las cosas y convertir ese conocimiento en algo
+              útil. Estoy construyendo una relación práctica con la inteligencia artificial:
+              no solo usarla, sino aprender a pensar y crear mejor con ella.
+            </p>
+            <p>
+              La música aporta la otra mitad: escucha, improvisación y constancia. Este sitio es
+              mi espacio para documentar el camino, conectar ideas y compartir lo aprendido.
+            </p>
+          </div>
+        </div>
+        <div class="principles" aria-label="Principios">
+          <article class="reveal">
+            <span>01</span>
+            <h3>Aprender</h3>
+            <p>La curiosidad abre puertas que todavía no sabemos nombrar.</p>
+          </article>
+          <article class="reveal" data-delay="1">
+            <span>02</span>
+            <h3>Crear</h3>
+            <p>Las ideas adquieren valor cuando se convierten en algo real.</p>
+          </article>
+          <article class="reveal" data-delay="2">
+            <span>03</span>
+            <h3>Compartir</h3>
+            <p>El conocimiento crece cuando circula y conecta a las personas.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="intereses" class="interests section-shell" aria-labelledby="interests-title">
+        <div class="section-heading reveal">
+          <p class="section-number">03 / Proyectos e intereses</p>
+          <h2 id="interests-title">Lo que ocupa<br /><em>mi atención.</em></h2>
+        </div>
+
+        <div class="interest-list">
+          <!-- EDITAR: cambia títulos, descripciones y etiquetas según evolucionen tus proyectos. -->
+          <article class="interest-card reveal" tabindex="0">
+            <span class="card-index">01</span>
+            <div>
+              <p class="card-kicker">Exploración activa</p>
+              <h3>Inteligencia artificial</h3>
+              <p>Herramientas, agentes y nuevas formas de colaborar con máquinas.</p>
+            </div>
+            <span class="card-arrow" aria-hidden="true">↗</span>
+          </article>
+          <article class="interest-card reveal" tabindex="0">
+            <span class="card-index">02</span>
+            <div>
+              <p class="card-kicker">Construir para aprender</p>
+              <h3>Tecnología y código</h3>
+              <p>Pequeños proyectos que convierten preguntas en experiencias.</p>
+            </div>
+            <span class="card-arrow" aria-hidden="true">↗</span>
+          </article>
+          <article class="interest-card reveal" tabindex="0">
+            <span class="card-index">03</span>
+            <div>
+              <p class="card-kicker">Disciplina creativa</p>
+              <h3>Música y saxofón</h3>
+              <p>Improvisación, sensibilidad y el placer de seguir practicando.</p>
+            </div>
+            <span class="card-arrow" aria-hidden="true">↗</span>
+          </article>
+          <article class="interest-card reveal" tabindex="0">
+            <span class="card-index">04</span>
+            <div>
+              <p class="card-kicker">Siempre en beta</p>
+              <h3>Aprendizaje continuo</h3>
+              <p>Ideas, libros y experimentos para ampliar la manera de pensar.</p>
+            </div>
+            <span class="card-arrow" aria-hidden="true">↗</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="contacto" class="contact section-shell" aria-labelledby="contact-title">
+        <p class="section-number reveal">04 / Contacto</p>
+        <div class="contact-main reveal">
+          <p class="eyebrow"><span></span> La conversación empieza aquí</p>
+          <h2 id="contact-title">¿Creamos algo<br /><em>interesante?</em></h2>
+          <p>Si compartimos curiosidad por la tecnología, la IA o la música, hablemos.</p>
+          <div class="contact-actions">
+            <!-- EDITAR: puedes añadir aquí tu correo y otras redes cuando quieras. -->
+            <a class="button button-primary" href="https://github.com/edarji" target="_blank" rel="noreferrer">Conversemos en GitHub <span>↗</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer section-shell">
+      <a class="brand" href="#inicio" aria-label="Volver al inicio"><span>EA</span><i></i></a>
+      <p>© <span data-year></span> Eduardo ArJi</p>
+      <p>Hecho con curiosidad y ritmo.</p>
+    </footer>
+  </body>
 </html>

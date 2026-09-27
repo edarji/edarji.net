@@ -2,7 +2,7 @@
   "schema_version": 2,
   "mode": "official",
   "timezone": "America/Mexico_City",
-  "generated_at": "2026-09-27T17:11:00.742386+00:00",
+  "generated_at": "2026-09-27T17:33:28.672350+00:00",
   "demand": {
     "system": "SIN",
     "unit": "MW",
@@ -10,6 +10,10 @@
       {
         "timestamp": "2026-09-27T11:10:24-06:00",
         "value": 35747.0
+      },
+      {
+        "timestamp": "2026-09-27T11:27:46-06:00",
+        "value": 36318.0
       }
     ],
     "period": "2026-09-27",
@@ -19,8 +23,8 @@
     },
     "stale_after_hours": 2,
     "status": "official",
-    "fetched_at": "2026-09-27T17:11:00.742386+00:00",
-    "last_attempt_at": "2026-09-27T17:11:00.742386+00:00",
+    "fetched_at": "2026-09-27T17:33:28.672350+00:00",
+    "last_attempt_at": "2026-09-27T17:33:28.672350+00:00",
     "error": null
   },
   "pml": {
@@ -351,8 +355,8 @@
     },
     "stale_after_hours": 30,
     "status": "official",
-    "fetched_at": "2026-09-27T17:20:58.582239+00:00",
-    "last_attempt_at": "2026-09-27T17:20:58.582239+00:00",
+    "fetched_at": "2026-09-27T17:33:36.880821+00:00",
+    "last_attempt_at": "2026-09-27T17:33:36.880821+00:00",
     "error": null
   },
   "generation": {
@@ -414,8 +418,8 @@
     "liquidation": "Original (L0)",
     "published_label": "14/sep/2026 05:00:01 hrs.",
     "status": "official",
-    "fetched_at": "2026-09-27T17:11:00.742386+00:00",
-    "last_attempt_at": "2026-09-27T17:11:00.742386+00:00",
+    "fetched_at": "2026-09-27T17:33:28.672350+00:00",
+    "last_attempt_at": "2026-09-27T17:33:28.672350+00:00",
     "error": null
   }
 }

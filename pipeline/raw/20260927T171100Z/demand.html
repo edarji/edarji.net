@@ -1,0 +1,656 @@
+
+<!DOCTYPE html>
+<!-- PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><title>
+	Gráfica de Demanda
+</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="imagetoolbar" content="no" /><meta name="viewport" content="width=device-width, initial-scale=1" /><script type="text/javascript" src="/ruxitagentjs_ICA7NQVfqrux_10323250822043923.js" data-dtconfig="rid=RID_1658632871|rpid=279168523|domain=cenace.gob.mx|reportUrl=/rb_bf23936fjy|app=6a50c656be6c2dd8|owasp=1|featureHash=ICA7NQVfqrux|msl=153600|srsr=30000|rdnt=0|uxrgce=1|cuc=ivxd4ocj|srms=2,1,0,0%2Ftextarea%2Cinput%2Cselect%2Coption;0%2Fdatalist;0%2Fform%20button;0%2F%5Bdata-dtrum-input%5D;0%2F.data-dtrum-input;1%2F%5Edata%28%28%5C-.%2B%24%29%7C%24%29|mel=100000|expw=1|dpvc=1|lastModification=1759936213979|tp=500,50,0|srbbv=2|agentUri=/ruxitagentjs_ICA7NQVfqrux_10323250822043923.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300" rel="stylesheet" type="text/css" /><link href="https://framework-gb.cdn.gob.mx/assets/styles/main.css" rel="stylesheet" /><link rel="stylesheet" href="/styles/layout.css" type="text/css" /><link rel="stylesheet" href="/styles/responsiveslides.css" type="text/css" /><link rel="stylesheet" href="/styles/megaOne.css" type="text/css" /><link rel="stylesheet" href="/styles/jquery-ui.css" type="text/css" /><link rel="stylesheet" href="/SIM/VISTA/styles/arbol.css" type="text/css" /><link rel="stylesheet" href="/styles/jquery.modal.css" type="text/css" /><link rel="stylesheet" href="/styles/directorio.css" type="text/css" /><link href="https://framework-gb.cdn.gob.mx/favicon.ico" rel="shortcut icon" />
+
+
+  
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  
+    <script src="/scripts/bootstrap.min.js"></script>
+  
+    <script type="text/javascript" src="/scripts/jquery.scrollTo-min.js"></script>
+  
+    <script type="text/javascript" src="/scripts/jquery.min.js"></script> <!-- la active nuevamente para capacitacion -->
+    <script type="text/javascript" src="/scripts/jquery-ui-1.8.13.custom.min.js"></script>
+   
+  
+    <script src="/scripts/jquery-ui.js"></script>
+    <script type="text/javascript" src="/scripts/tabcontent.js"></script>
+    <script type="text/javascript" src="/scripts/ddimgtooltip.js"></script>
+    <!-- Homepage Only Scripts -->
+  
+   
+    <script type="text/javascript" src="/scripts/responsiveslides.js"></script>
+    <script type="text/javascript" src="scripts/jquery.modal.js"></script>
+    <!--<script src=“https://framework-gb.cdn.gob.mx/scripts/modal_sgb.js"></script>-->    
+    <!--<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <script src="https://framework-gb.cdn.gob.mx/scripts/modal_sgb.js"></script>  --> 
+
+    <!-- Respond.js soporte de media queries para Internet Explorer 8 -->
+    <!-- ie8.js EventTarget para cada nodo en Internet Explorer 8 -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/ie8/0.2.2/ie8.js"></script>
+    <![endif]-->
+	
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/af-2.3.3/cr-1.5.0/fc-3.2.5/fh-3.1.4/kt-2.5.0/r-2.2.2/rg-1.1.0/rr-1.2.4/sc-2.0.0/sl-1.3.0/datatables.min.css" /> 
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/af-2.3.3/cr-1.5.0/fc-3.2.5/fh-3.1.4/kt-2.5.0/r-2.2.2/rg-1.1.0/rr-1.2.4/sc-2.0.0/sl-1.3.0/datatables.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $(".rslides").responsiveSlides();
+
+        });
+        function removeClassName(elem, className) {
+            elem.className = elem.className.replace(className, "").trim();
+        }
+        function addCSSClass(elem, className) {
+            removeClassName(elem, className);
+            elem.className = (elem.className + " " + className).trim();
+        }
+        String.prototype.trim = function () {
+            return this.replace(/^\s+|\s+$/, "");
+        }
+        function stripedTable() {
+            if (document.getElementById && document.getElementsByTagName) {
+                var allTables = document.getElementsByTagName('table');
+                if (!allTables) { return; }
+                for (var i = 0; i < allTables.length; i++) {
+                    if (allTables[i].className.match(/[\w\s ]*scrollTable[\w\s ]*/)) {
+                        var trs = allTables[i].getElementsByTagName("tr");
+                        for (var j = 0; j < trs.length; j++) {
+                            removeClassName(trs[j], 'alternateRow');
+                            addCSSClass(trs[j], 'normalRow');
+                        }
+                        for (var k = 0; k < trs.length; k += 2) {
+                            removeClassName(trs[k], 'normalRow');
+                            addCSSClass(trs[k], 'alternateRow');
+                        }
+                    }
+                }
+            }
+        }
+        function addIEonScroll() {
+            var thisContainer = document.getElementById('tableContainer');
+            if (!thisContainer) { return; }
+            var onClickAction = 'toggleSelectBoxes();';
+            thisContainer.onscroll = new Function(onClickAction);
+        }
+        function toggleSelectBoxes() {
+            var thisContainer = document.getElementById('tableContainer');
+            var thisHeader = document.getElementById('fixedHeader');
+            if (!thisContainer || !thisHeader) { return; }
+            var selectBoxes = thisContainer.getElementsByTagName('select');
+            if (!selectBoxes) { return; }
+            for (var i = 0; i < selectBoxes.length; i++) {
+                if (thisContainer.scrollTop >= eval(selectBoxes[i].parentNode.offsetTop - thisHeader.offsetHeight)) {
+                    selectBoxes[i].style.visibility = 'hidden';
+                } else {
+                    selectBoxes[i].style.visibility = 'visible';
+                }
+            }
+        }
+        window.onload = function () {
+             stripedTable(); addIEonScroll();
+        }
+
+        $(document).ready(function () {
+            $('#zebra tbody tr:even').addClass('zebra');
+            /*HOVER's: start*/
+            $('#zebra tbody tr:even').mouseover(function () {
+                $(this).removeClass('zebra');
+                $(this).addClass('blue');
+
+                $('#zebra tbody tr:even').mouseout(function () {
+                    $(this).removeClass('blue');
+                    $(this).addClass('zebra');
+                });
+            });
+            $('#zebra tbody tr:odd').mouseover(function () {
+                $(this).addClass('grey');
+
+                $('#zebra tbody tr:odd').mouseout(function () {
+                    $(this).removeClass('grey');
+                });
+
+            });
+            /*HOVER's: end*/
+            $(".menuIzq").find('a[href="#"]').attr("title", "Próximamente estará disponible");
+
+            $(".menuIzq").find('a[href="#"]').click(function () {
+                return false;
+            });
+        });
+
+
+
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function (e) {
+            $('#LoadPage').load('http://google.com', function (data) {
+                $(this).html(data)
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+           $('#ContentPlaceHolder1_DrpAnio').addClass('btn btn-default dropdown-toggle');
+            $(".submenuIzq").on('click', function (event) {
+
+                var sub = $(this);
+                if (sub.hasClass("submenuOculto")) {
+                    sub.addClass("submenuVisible").removeClass("submenuOculto");
+                    return false;
+                }
+
+                else {
+
+                    if ($(event.target).first().parents("li").first().hasClass("submenuVisible")) {
+                        sub.addClass("submenuOculto").removeClass("submenuVisible");
+                        // return false;
+
+
+                    }
+                }
+            });
+        });
+
+   //Capitaliza todos los titulos de las páginas 
+        //Capitaliza todos los titulos de las páginas 
+        $(document).ready(function () {         
+            minLength = 2;
+            var words = $('.titulo').text().split(' ');
+            var titulos = '';
+                
+                 $.each(words, function (i, word) {
+                      
+                     if ($.trim(word) == "CENACE" || $.trim(word) == "MEM" || $.trim(word) == "SENER" || $.trim(word) == "CRE" || $.trim(word) == "RNT"
+                         || $.trim(word) == "GCRBC" || $.trim(word) == "GCRNE" || $.trim(word) == "GCRNO" || $.trim(word) == "GCRC" || $.trim(word) == "GCRNT"
+                         || $.trim(word) == "GCRP" || $.trim(word) == "GCROR" || $.trim(word) == "SEN" || $.trim(word) == "BCA" || $.trim(word) == "I" || $.trim(word) == "II"
+                          || $.trim(word) == "CCARM" || $.trim(word) == "OSEN" || $.trim(word) == "PER" || $.trim(word) == "CILs" || $.trim(word) == "Paz" ) {
+                          titulos += words[i] + ' ';
+                    }
+
+                     else if ($.trim(word).length <= minLength || $.trim(word) == "SOBRE" || $.trim(word) == "PARA" || $.trim(word) == "LAS" || $.trim(word) == "DEL" || $.trim(word) == "FORMA"
+                     || $.trim(word) == "POR" || $.trim(word) == "CON")
+                      
+                     {
+                         titulos += words[i].toLowerCase() + ' ';
+                     }
+                 
+                     else 
+                     {
+                         titulos += words[i].charAt(0) + words[i].slice(1).toLowerCase() + ' ';
+                     }
+
+
+
+                });
+            
+               //  $('.titulo').append
+                 $('.titulo').html(titulos).append("<hr class='red' style='margin-bottom: 40px;' />");
+        });
+    </script>
+
+    <!-- SCRIPT DE GOOGLE ANALYTICS PARA ESTADISTICAS -->
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-62147574-1', 'auto');
+        ga('send', 'pageview');
+
+        $(document).ready(function () {
+            $('ul.nav li.dropdown').hover(function () {
+                $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(200);
+            }, function () {
+                $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(200);
+            });
+        });
+    </script>
+   <style>
+	.alert{ 
+	  margin-bottom: 0;
+	  border-radius: 0;
+	  width:100%;
+	  position:fixed;
+	  z-index:1030;
+	  top:86px;
+	}
+   </style>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="La presente gr&aacute;fica muestra la demanda actual del Sistema, en relaci&oacute;n a la demanda pronosticada y recursos disponibles." />
+    <script type="text/javascript" src="/scripts/lib/amcharts/amcharts.js"></script>
+    <script type="text/javascript" src="/scripts/lib/amcharts/serial.js"></script>
+    <script type="text/javascript" src="/scripts/responsiveslides.js"></script>
+    <script type="text/javascript" src="/scripts/funcionesGrafica.js"></script>
+    <script type="text/javascript" src="/scripts/funcionesIndex.js"></script>
+</head>
+<!--INICIA ENCABEZADO -->
+<body id="top" style="margin: 0px; padding: 68px 0px 0px 0px;">
+     <nav class="navbar navbar-inverse navbar-fixed-top navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-target="#navbarMainCollapse" data-toggle="collapse">
+                    <span class="sr-only">Interruptor de Navegación</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="https://www.gob.mx/" style="padding-left: 6px;" class="navbar-brand" title="Ir a la página inicial Gob.Mx">
+                   <img src="/images/iconos/logoheader.svg" width="75" height="23" alt="Página de inicio, Gobierno de México"/></a>
+            </div>
+            <div id="navbarMainCollapse" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="https://www.gob.mx/tramites" title="Trámites">Trámites</a></li>
+                    <li><a href="https://www.gob.mx/gobierno" title="Gobierno">Gobierno</a></li>
+                    
+                    <li><a href="https://datos.gob.mx" title="Datos Abiertos">Datos</a></li>
+                   <li><a href="https://www.gob.mx/busqueda"><span class="sr-only">Búsqueda</span><i class="icon-search"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-inverse sub-navbar fixed-top" style="margin-top: 10px;  position:fixed"> 
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#subenlaces">
+                    <span class="sr-only">Interruptor de Navegación</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="subenlaces">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="http://www.gob.mx/cenace/archivo/articulos">Blog</a></li>
+                    <li><a href="http://www.gob.mx/cenace/archivo/multimedia">Multimedia</a></li>
+                    <li><a href="http://www.gob.mx/cenace/archivo/prensa">Prensa</a></li>
+                    <li><a href="http://www.gob.mx/cenace/archivo/acciones_y_programas">Acciones y Programas</a></li>
+                    <li><a href="http://www.gob.mx/cenace/archivo/documentos">Documentos</a></li>
+                    <li><a href="/Transparencia.aspx">Transparencia</a></li>
+                    <li><a href="/ProteccionDatosPersonales.aspx">Protección de Datos Personales</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+          
+        <form method="post" action="./graficademanda.aspx" id="form2" style="padding-top:70px">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNzUxNjg1ODg2D2QWAmYPZBYCAgMPZBYCAgEPZBZYAgMPDxYCHgRUZXh0BRpkb21pbmdvIDI3IHNlcHRpZW1icmUgMjAyNmRkAgUPDxYCHwAFGTI3LzA5LzIwMjYgMTE6MTA6MjQgYS4gbS5kZAIHD2QWAmYPZBYCZg9kFgJmDw8WAh8ABQkzNiw3MTggTVdkZAIJD2QWAmYPZBYEZg9kFgJmDw8WAh8ABQkzNSw3NDcgTVdkZAIBD2QWAmYPDxYCHwAFCTQxLDI2MSBNV2RkAgsPDxYCHwAFCDIsMDcxIE1XZGQCDQ8PFgIfAAUIMiwwNjYgTVdkZAIPDw8WAh8ABQgyLDA5NCBNV2RkAhEPDxYCHwAFGTI3LzA5LzIwMjYgMTE6MTA6MjQgYS4gbS5kZAITDw8WAh8ABQY1MTEgTVdkZAIVDw8WAh8ABQY1MjkgTVdkZAIXDw8WAh8ABQY1MzkgTVdkZAIZDw8WAh8ABRkyNy8wOS8yMDI2IDExOjEwOjI0IGEuIG0uZGQCGw8PFgIfAAUINiwyNzggTVdkZAIdDw8WAh8ABQgyLDkzNCBNV2RkAh8PDxYCHwAFCDYsOTk4IE1XZGQCIQ8PFgIfAAUZMjcvMDkvMjAyNiAxMToxMDoyNCBhLiBtLmRkAiMPDxYCHwAFCDcsNjgxIE1XZGQCJQ8PFgIfAAUIOSwwOTMgTVdkZAInDw8WAh8ABQg4LDQ2MCBNV2RkAikPDxYCHwAFGTI3LzA5LzIwMjYgMTE6MTA6MjQgYS4gbS5kZAIrDw8WAh8ABQgzLDcyMiBNV2RkAi0PDxYCHwAFCDQsMzA3IE1XZGQCLw8PFgIfAAUIMyw4NDkgTVdkZAIxDw8WAh8ABRkyNy8wOS8yMDI2IDExOjEwOjI0IGEuIG0uZGQCMw8PFgIfAAUIMiw3MDAgTVdkZAI1Dw8WAh8ABQgzLDg1OSBNV2RkAjcPDxYCHwAFCDIsOTc2IE1XZGQCOQ8PFgIfAAUZMjcvMDkvMjAyNiAxMToxMDoyNCBhLiBtLmRkAjsPDxYCHwAFCDYsOTU4IE1XZGQCPQ8PFgIfAAUINyw4MDMgTVdkZAI/Dw8WAh8ABQg4LDg1MCBNV2RkAkEPDxYCHwAFGTI3LzA5LzIwMjYgMTE6MTA6MjQgYS4gbS5kZAJDDw8WAh8ABQg2LDU4NyBNV2RkAkUPDxYCHwAFCDYsMjg5IE1XZGQCRw8PFgIfAAUINyw1NDcgTVdkZAJJDw8WAh8ABRkyNy8wOS8yMDI2IDExOjEwOjI0IGEuIG0uZGQCSw8PFgIfAAUIMSw4MzIgTVdkZAJNDw8WAh8ABQgxLDc2MiBNV2RkAk8PDxYCHwAFCDIsMDIxIE1XZGQCUQ8PFgIfAAUZMjcvMDkvMjAyNiAxMToxMDoyNCBhLiBtLmRkAlMPDxYCHwAFCTM1LDc0NyBNV2RkAlUPDxYCHwAFCTM2LDA0NiBNV2RkAlcPDxYCHwAFCTQxLDI2MSBNV2RkAlkPDxYCHwAFGTI3LzA5LzIwMjYgMTE6MTA6MjQgYS4gbS5kZGTtX7QI/kGMDOQX+WZbGIRBhFbu5tauuuin/cCXG09V+A==" />
+
+
+<script type="text/javascript">
+//<![CDATA[
+var datosHistoricoIncluidos = true;//]]>
+</script>
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="9E00176A" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAJTU25k9rWxu8OytJadLZBBjJzQC3MztDROSjgHrZDrRZoZuKm/wsPliICeChgCOwsm3Gynw8dH2PodXvW3HDph" />
+            <div id="espacioentremenutitulocontacto">
+            </div>
+            <div id="contenido" class="wrapper col4">
+                
+    <div id="chartcurtain" class="chartCurtain"><span>Cargando datos...</span></div>
+    <div class="breadcrumbGrafica" style="margin:0px;padding-bottom:30px;padding-left: 0px;"><div class="breadcrumb" style="text-align: left; margin-left: 50px; margin-bottom:0px;">
+    <span id="ContentPlaceHolder1_graficasBreadcrumb_smpMapPath" style="display:inline-block;"><a href="#ContentPlaceHolder1_graficasBreadcrumb_smpMapPath_SkipLink"><img alt="Skip Navigation Links" src="/WebResource.axd?d=m_gpC38WsyEnxokFzTvIQdzhxkuAz-klE-fs_46F6nThda_B35yQwghiOPB1h0a1mIAakDgQ3KsmG3bzWRwFHQqhU-9wAoBYgFtkczSERag1&amp;t=639202380265548063" width="0" height="0" border="0" /></a><span>
+            <a href="http://www.gob.mx/cenace" title="Inicio"><i class="icon icon-home"></i></a>
+        </span><span>
+            <span class="divider"></span>
+        </span><span><a title="CENACE" href="/CENACE.aspx">CENACE</a></span><span>
+            <span class="divider"></span>
+        </span><span><b><font color="#545454">Gr&#225;fica de Demanda</font></b></span><a id="ContentPlaceHolder1_graficasBreadcrumb_smpMapPath_SkipLink"></a></span><br />
+     <span id="ContentPlaceHolder1_graficasBreadcrumb_SIM_AP" style="font-weight:600; font-size:20px;"></span>
+</div>
+</div>
+    <br />
+    <div id="containerGrafica" style="padding: 0;">
+        <div class="chartContainer">
+            <div class="infodiv">            
+                <!-- <div id="fecha" class="fechaGrafica"><span id="ContentPlaceHolder1_fechaSistema">domingo 27 septiembre 2026</span></div>-->
+                <div id="panorama"><!-- onclick="location.href='GraficaDemanda.aspx'" title="Haga Clic para ver detalles"> -->
+                    <span id="panoramaTitulo" class="header_news">Sistema Interconectado Nacional<br /></span>
+                    <div class="panoramaFecha header_news">
+                        <span id="ContentPlaceHolder1_datetimeNAC">27/09/2026 11:10:24 a. m.</span>
+                    </div>
+                    <table class="TablePanorama">
+	<tr>
+		<td id="ContentPlaceHolder1_panoramaDemanda"><span id="ContentPlaceHolder1_demandaNAC" class="panoramaCantidad cellCenter">36,718 MW</span></td>
+	</tr><tr>
+		<td><span class="panoramaLabel">Demanda Bruta Actual</span></td>
+	</tr>
+</table>
+                    <table class="TablePanorama">
+	<tr>
+		<td id="ContentPlaceHolder1_panoramaDemandaNeta"><span id="ContentPlaceHolder1_demandaNACNeta" class="panoramaCantidad left">35,747 MW</span></td><td id="ContentPlaceHolder1_panoramaPronostico"><span id="ContentPlaceHolder1_pronosticoNACNeto" class="panoramaCantidad right">41,261 MW</span></td>
+	</tr><tr>
+		<td><span class="panoramaLabel left" >Demanda Actual Neta</span></td><td><span class="panoramaLabel right">Pron&oacute;stico Neto</span></td>
+	</tr><tr>
+		<td colspan="2"><div style="border-bottom: 1px solid #8E9090;margin-top:10px"></div></td>
+	</tr>
+</table>
+                </div>
+
+                
+                               
+                <br />
+                <!-- Estado del Sistema - BEGIN -->     
+                <span id="panoramaRegiones" class="header_news" style="border:none; padding-top:0">Demanda Sistema El&eacute;ctrico Nacional</span>
+                <div id="Div10" class="columna-estado-sistema" onclick="location.href='../../../Paginas/Publicas/Info/DemandaRegional.aspx'"  title="Haga Clic para ver detalles">
+                    <ul id="notes" class="rslides">
+                        <li class="ccbc">
+                            <span class="titlex">Baja California</span>
+                            <p>
+                                Demanda Neta:
+                                <span id="ContentPlaceHolder1_demandaBC" class="bold">2,071 MW</span>
+                            </p>
+                            <p>
+                                Generaci&oacute;n Neta:
+                                <span id="ContentPlaceHolder1_generacionBC" class="bold">2,066 MW</span>
+                            </p>
+                            <p>
+                                Pron&oacute;stico Neto:
+                                <span id="ContentPlaceHolder1_enlaceBC" class="bold">2,094 MW</span>
+                            </p>
+                            <p style="font-size: 11px; margin-top:10px">
+                                <span id="ContentPlaceHolder1_datetimeBC" class="bold">27/09/2026 11:10:24 a. m.</span>
+                            </p>
+                        </li>
+                        <li class="ccbcsur">
+                            <span class="titlex">Baja California Sur</span>
+                            <p>
+                                Demanda Neta:
+                                <span id="ContentPlaceHolder1_demandaBCS" class="bold">511 MW</span>
+                            </p>
+                            <p>
+                                Generaci&oacute;n Neta:
+                                <span id="ContentPlaceHolder1_generacionBCS" class="bold">529 MW</span>
+                            </p>
+                            <p>
+                                Pron&oacute;stico Neto:
+                                <span id="ContentPlaceHolder1_enlaceBCS" class="bold">539 MW</span>
+                            </p>
+                          
+                            <p style="font-size: 11px; margin-top:10px">
+                                <span id="ContentPlaceHolder1_datetimeBCS" class="bold">27/09/2026 11:10:24 a. m.</span>
+                            </p>
+                        </li>
+                        <li class="cccentral">
+                            <span class="titlex">CENTRAL</span>
+                            <p>
+                                Demanda Neta:
+                                <span id="ContentPlaceHolder1_demandaCEN" class="bold">6,278 MW</span>
+                            </p>
+                            <p>
+                                Generaci&oacute;n Neta:
+                                <span id="ContentPlaceHolder1_generacionCEN" class="bold">2,934 MW</span>
+                            </p>
+                            <p>
+                                Pron&oacute;stico Neto:
+                                <span id="ContentPlaceHolder1_enlaceCEN" class="bold">6,998 MW</span>
+                            </p>
+                            <p style="font-size: 11px; margin-top:10px">
+                                <span id="ContentPlaceHolder1_datetimeCEN" class="bold">27/09/2026 11:10:24 a. m.</span>
+                            </p>
+                        </li>
+                        <li class="ccnoreste">
+                            <span class="titlex">NORESTE</span>
+                            <p>
+                                Demanda Neta:
+                                <span id="ContentPlaceHolder1_demandaNE" class="bold">7,681 MW</span>
+                            </p>
+                            <p>
+                                Generaci&oacute;n Neta:
+                                <span id="ContentPlaceHolder1_generacionNE" class="bold">9,093 MW</span>
+                            </p>
+                            <p>
+                                Pron&oacute;stico Neto:
+                                <span id="ContentPlaceHolder1_enlaceNE" class="bold">8,460 MW</span>
+                            </p>
+                            <p style="font-size: 11px; margin-top:10px">
+                                <span id="ContentPlaceHolder1_datetimeNE" class="bold">27/09/2026 11:10:24 a. m.</span>
+                            </p>
+                        </li>
+                        <li class="ccnoroeste">
+                            <span class="titlex">NOROESTE</span>
+                            <p>
+                                Demanda Neta:
+                                <span id="ContentPlaceHolder1_demandaNO" class="bold">3,722 MW</span>
+                            </p>
+                            <p>
+                                Generaci&oacute;n Neta:
+                                <span id="ContentPlaceHolder1_generacionNO" class="bold">4,307 MW</span>
+                            </p>
+                            <p>
+                                Pron&oacute;stico Neto:
+                                <span id="ContentPlaceHolder1_enlaceNO" class="bold">3,849 MW</span>
+                            </p>
+                           
+                            <p style="font-size: 11px; margin-top:10px">
+                                <span id="ContentPlaceHolder1_datetimeNO" class="bold">27/09/2026 11:10:24 a. m.</span>
+                            </p>
+                        </li>
+                        <li class="ccnorte">
+                            <span class="titlex">NORTE</span>
+                            <p>
+                                Demanda Neta:
+                                <span id="ContentPlaceHolder1_demandaNTE" class="bold">2,700 MW</span>
+                            </p>
+                            <p>
+                                Generaci&oacute;n Neta:
+                                <span id="ContentPlaceHolder1_generacionNTE" class="bold">3,859 MW</span>
+                            </p>
+                            <p>
+                                Pron&oacute;stico Neto:
+                                <span id="ContentPlaceHolder1_enlaceNTE" class="bold">2,976 MW</span>
+                            </p>
+                         
+                            <p style="font-size: 11px; margin-top:10px">
+                                <span id="ContentPlaceHolder1_datetimeNTE" class="bold">27/09/2026 11:10:24 a. m.</span>
+                            </p>
+                        </li>
+                        <li class="ccoccidental">
+                            <span class="titlex">OCCIDENTAL</span>
+                            <p>
+                                Demanda Neta:
+                                <span id="ContentPlaceHolder1_demandaOCC" class="bold">6,958 MW</span>
+                            </p>
+                            <p>
+                                Generaci&oacute;n Neta:
+                                <span id="ContentPlaceHolder1_generacionOCC" class="bold">7,803 MW</span>
+                            </p>
+                            <p>
+                                Pron&oacute;stico Neto:
+                                <span id="ContentPlaceHolder1_enlaceOCC" class="bold">8,850 MW</span>
+                            </p>
+                         
+                            <p style="font-size: 11px; margin-top:10px">
+                                <span id="ContentPlaceHolder1_datetimeOCC" class="bold">27/09/2026 11:10:24 a. m.</span>
+                            </p>
+                        </li>
+                        <li class="ccoriental">
+                            <span class="titlex">ORIENTAL</span>
+                            <p>
+                                Demanda Neta:
+                                <span id="ContentPlaceHolder1_demandaOR" class="bold">6,587 MW</span>
+                            </p>
+                            <p>
+                                Generaci&oacute;n Neta:
+                                <span id="ContentPlaceHolder1_generacionOR" class="bold">6,289 MW</span>
+                            </p>
+                            <p>
+                                Pron&oacute;stico Neto:
+                                <span id="ContentPlaceHolder1_enlaceOR" class="bold">7,547 MW</span>
+                            </p>
+                          
+                            <p style="font-size: 11px; margin-top:10px">
+                                <span id="ContentPlaceHolder1_datetimeOR" class="bold">27/09/2026 11:10:24 a. m.</span>
+                            </p>
+                        </li>
+                        <li class="ccpeninsular">
+                            <span class="titlex">PENINSULAR</span>
+                            <p>
+                                Demanda Neta:
+                                <span id="ContentPlaceHolder1_demandaPEN" class="bold">1,832 MW</span>
+                            </p>
+                            <p>
+                                Generaci&oacute;n Neta:
+                                <span id="ContentPlaceHolder1_generacionPEN" class="bold">1,762 MW</span>
+                            </p>
+                            <p>
+                                Pron&oacute;stico Neto:
+                                <span id="ContentPlaceHolder1_enlacePEN" class="bold">2,021 MW</span>
+                            </p>
+                            <p style="font-size: 11px; margin-top:10px">
+                                <span id="ContentPlaceHolder1_datetimePEN" class="bold">27/09/2026 11:10:24 a. m.</span>
+                            </p>
+                        </li>
+                        <li class="sinacional">
+                            <span class="titlex">S.I. NACIONAL</span>
+                            <p>
+                                Demanda Neta:
+                                <span id="ContentPlaceHolder1_demandaNAC2" class="bold">35,747 MW</span>
+                            </p>
+                            <p>
+                                Generaci&oacute;n Neta:
+                                <span id="ContentPlaceHolder1_generacionNAC" class="bold">36,046 MW</span>
+                            </p>
+                            <p>
+                                Pron&oacute;stico Neto:
+                                <span id="ContentPlaceHolder1_enlaceNAC" class="bold">41,261 MW</span>
+                            </p>
+                            <p style="font-size: 11px;margin-top:10px ">
+                                <span id="ContentPlaceHolder1_datetimeNAC2" class="bold">27/09/2026 11:10:24 a. m.</span>
+                            </p>
+                        </li>
+                    </ul>                 
+                </div>
+                <div id="titulo" style="margin-left: 0; width: 275px;" class="header_news" title="La presente gr&aacute;fica muestra la demanda actual del Sistema, en relaci&oacute;n a la demanda pronosticada y recursos disponibles.">
+                    Sistema Interconectado Nacional
+                </div>
+                <span class="labelGrafica tope" title="Demanda Actual en este punto del tiempo.">Demanda Actual Neta (gráfica)</span>
+                
+                <span class="cantidadGrafica">
+                    <span id="demandaActual"></span>
+                </span>
+                        
+                <span class="labelGrafica" title="Punto mas alto de la demanda hasta el momento.">Demanda M&aacute;xima del d&iacute;a</span>
+                
+                <span class="cantidadGrafica">
+                    <span id="demandaPico"></span>
+                </span>
+                        
+                <span class="labelGrafica" title="Punto mas alto de la demanda Dia en Adelanto.">Demanda M&aacute;xima Pronosticada</span>
+                
+                <span class="cantidadGrafica">
+                    <span id="pronosticoDAPico"></span>
+                </span>              
+            </div>
+
+            <div id="charter">
+                <div id="selects">
+                    <div id="selectSistema">
+                        <label for="sistemas" class="labelUpper">Sistema</label>
+                        <select id="sistemas" name="sistemas" onchange="cargaGrafica(this.value);">
+                            <option value="10" selected="selected">Sistema Interconectado Nacional</option>
+                            <option value="1">Baja California</option>
+                            <option value="2">Baja California Sur</option>
+                            <option value="11" disabled="disabled">Mulege - Guerrero Negro (En breve estar&aacute; disponible)</option>
+                        </select>
+                    </div>
+                    <div id="selectGerencias">
+                        <label for="gerencias" class="labelUpper">Regi&oacute;n</label>
+                        <select id="gerencias" name="gerencias" onchange="cargaGrafica(this.value);">
+                            
+                            <option value="0" selected="selected">----</option>
+                            <option value="3">Central</option>
+                            <option value="4">Noreste</option>
+                            <option value="5">Noroeste</option>
+                            <option value="6">Norte</option>
+                            <option value="7">Occidental</option>
+                            <option value="8">Oriental</option>
+                            <option value="9">Peninsular</option>                               
+                        </select>
+                    </div>
+                </div>
+
+                <div id="ContentPlaceHolder1_chartdiv" class="chartdiv"></div>
+
+                <br />
+
+                <p style="color:black; text-align:justify; margin-left:60px">
+                    La información que aquí se presenta es de carácter indicativo, su objetivo es únicamente mostrar el comportamiento de la Operación del Sistema Eléctrico Nacional. 
+                    Por lo que esta información no puede ser utilizada para otros efectos diferentes a los demostrativos a los que aquí se mencionan. 
+                </p>
+                <br />
+                <div id="selectTipoGrafica">
+                    <label for="tipoGrafica">Tipo de Gr&aacute;fica</label>
+                    <select id="tipoGrafica" name="tipoGrafica" onchange="changeTypeGraph(this.value);">
+                        
+                        <option value="line">Lineal</option>
+                        <option value="column">Barras</option>
+                        <option value="smoothedLine">Suavizada</option>
+                    </select>
+                </div>
+            </div>
+        </div>      
+    </div>
+    <span id="ContentPlaceHolder1_Label11" class="hidden">Label</span>
+    <span id="ContentPlaceHolder1_Label12" class="hidden">Label</span>
+    <span id="ContentPlaceHolder1_LabelReq" class="hidden">Label</span>
+    <span id="ContentPlaceHolder1_LabelRes" class="hidden">Label</span>
+    <span id="ContentPlaceHolder1_LabelPorc" class="hidden">Label</span>
+    <span id="ContentPlaceHolder1_LabelTope" class="hidden">Label</span>
+    <span id="ContentPlaceHolder1_LabelFreq" class="hidden">Label</span>
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$datetimeNAC_en" id="ContentPlaceHolder1_datetimeNAC_en" value="Sunday September 27 2026" /> 
+    <div style="height:30px"></div>
+
+            </div>
+            <script src="/scripts/funciones.js" type="text/javascript"></script>
+            <script type="text/javascript" src="/scripts/classie.js"></script>
+            <script type="text/javascript">
+                var buttons7Click = Array.prototype.slice.call(document.querySelectorAll('#btn-click a')),
+                    totalButtons7Click = buttons7Click.length;
+
+                buttons7Click.forEach(function (el, i) { el.addEventListener('click', activate, false); });
+
+                function activate() {
+                    var self = this, activatedClass = 'btn-activated';
+
+                    if (!classie.has(this, activatedClass)) {
+                        classie.add(this, activatedClass);
+                        setTimeout(function () { classie.remove(self, activatedClass) }, 1000);
+                    }
+                }
+
+            </script>
+              <div style="height: 50px;">&nbsp;</div>
+        </form>
+<script src="https://framework-gb.cdn.gob.mx/gobmx.js"></script>
+<script src="https://framework-gb.cdn.gob.mx/assets/scripts/jquery-ui-datepicker.js"></script>
+</body>
+</html>
+<!--[if IE lte 9]>      
+<style>
+    head:first-child + body div[class].tableContainer {
+        height: 255px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        width: 740px;
+    }
+    head:first-child + body tbody[class].scrollContent {
+    height: 0px;
+    }
+   
+ </style>
+<![endif] -->

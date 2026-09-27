@@ -1,0 +1,880 @@
+
+
+<!DOCTYPE html>
+<!-- PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><title>
+	Precios de Energía y Servicios Conexos MDA
+</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="imagetoolbar" content="no" /><meta name="viewport" content="width=device-width, initial-scale=1" /><script type="text/javascript" src="/ruxitagentjs_ICA7NQVfqrux_10323250822043923.js" data-dtconfig="rid=RID_-640910484|rpid=574186130|domain=cenace.gob.mx|reportUrl=/rb_bf23936fjy|app=6a50c656be6c2dd8|owasp=1|featureHash=ICA7NQVfqrux|msl=153600|srsr=30000|rdnt=0|uxrgce=1|cuc=ivxd4ocj|srms=2,1,0,0%2Ftextarea%2Cinput%2Cselect%2Coption;0%2Fdatalist;0%2Fform%20button;0%2F%5Bdata-dtrum-input%5D;0%2F.data-dtrum-input;1%2F%5Edata%28%28%5C-.%2B%24%29%7C%24%29|mel=100000|expw=1|dpvc=1|lastModification=1759936213979|tp=500,50,0|srbbv=2|agentUri=/ruxitagentjs_ICA7NQVfqrux_10323250822043923.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300" rel="stylesheet" type="text/css" /><link href="https://framework-gb.cdn.gob.mx/assets/styles/main.css" rel="stylesheet" /><link rel="stylesheet" href="/styles/layoutSIM.css" type="text/css" /><link rel="stylesheet" href="/styles/jquery-ui.css" type="text/css" /><link rel="stylesheet" href="/SIM/VISTA/styles/arbol.css" type="text/css" /><link href="https://framework-gb.cdn.gob.mx/favicon.ico" rel="shortcut icon" /><link href="../../../styles/APSIMStyles.css" rel="stylesheet" /><link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/af-2.3.3/cr-1.5.0/fc-3.2.5/fh-3.1.4/kt-2.5.0/r-2.2.2/rg-1.1.0/rr-1.2.4/sc-2.0.0/sl-1.3.0/datatables.min.css" /> 
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.min.js"></script> <!-- la active nuevamente para capacitacion -->
+    <script type="text/javascript" src="/scripts/jquery-ui.js"></script>
+ 
+     
+   
+    <script type="text/javascript" src="/scripts/ddimgtooltip.js"></script>
+    
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/af-2.3.3/cr-1.5.0/fc-3.2.5/fh-3.1.4/kt-2.5.0/r-2.2.2/rg-1.1.0/rr-1.2.4/sc-2.0.0/sl-1.3.0/datatables.min.js"></script>
+  
+      <!-- Homepage Only Scripts -->
+  
+    <script type="text/javascript" src="/scripts/responsiveslides.js"></script>
+ 
+  
+    <!--<script src=“https://framework-gb.cdn.gob.mx/scripts/modal_sgb.js"></script>-->      
+    <!-- Respond.js soporte de media queries para Internet Explorer 8 -->
+    <!-- ie8.js EventTarget para cada nodo en Internet Explorer 8 -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/ie8/0.2.2/ie8.js"></script>
+    <![endif]-->
+      
+     
+
+    <script type="text/javascript">
+        $(function () {
+            $(".rslides").responsiveSlides();
+
+        });
+        function removeClassName(elem, className) {
+            elem.className = elem.className.replace(className, "").trim();
+        }
+        function addCSSClass(elem, className) {
+            removeClassName(elem, className);
+            elem.className = (elem.className + " " + className).trim();
+        }
+        String.prototype.trim = function () {
+            return this.replace(/^\s+|\s+$/, "");
+        }
+        //function stripedTable() {
+        //    if (document.getElementById && document.getElementsByTagName) {
+        //        var allTables = document.getElementsByTagName('table');
+        //        if (!allTables) { return; }
+        //        for (var i = 0; i < allTables.length; i++) {
+        //            if (allTables[i].className.match(/[\w\s ]*scrollTable[\w\s ]*/)) {
+        //                var trs = allTables[i].getElementsByTagName("tr");
+        //                for (var j = 0; j < trs.length; j++) {
+        //                    removeClassName(trs[j], 'alternateRow');
+        //                    addCSSClass(trs[j], 'normalRow');
+        //                }
+        //                for (var k = 0; k < trs.length; k += 2) {
+        //                    removeClassName(trs[k], 'normalRow');
+        //                    addCSSClass(trs[k], 'alternateRow');
+        //                }
+        //            }
+        //        }
+        //    }
+        //}
+        function addIEonScroll() {
+            var thisContainer = document.getElementById('tableContainer');
+            if (!thisContainer) { return; }
+            var onClickAction = 'toggleSelectBoxes();';
+            thisContainer.onscroll = new Function(onClickAction);
+        }
+        function toggleSelectBoxes() {
+            var thisContainer = document.getElementById('tableContainer');
+            var thisHeader = document.getElementById('fixedHeader');
+            if (!thisContainer || !thisHeader) { return; }
+            var selectBoxes = thisContainer.getElementsByTagName('select');
+            if (!selectBoxes) { return; }
+            for (var i = 0; i < selectBoxes.length; i++) {
+                if (thisContainer.scrollTop >= eval(selectBoxes[i].parentNode.offsetTop - thisHeader.offsetHeight)) {
+                    selectBoxes[i].style.visibility = 'hidden';
+                } else {
+                    selectBoxes[i].style.visibility = 'visible';
+                }
+            }
+        }
+        window.onload = function () {
+            stripedTable(); addIEonScroll();
+        }
+
+        //$(document).ready(function () {
+        //    $('#zebra tbody tr:even').addClass('zebra');
+        //    /*HOVER's: start*/
+        //    $('#zebra tbody tr:even').mouseover(function () {
+        //        $(this).removeClass('zebra');
+        //        $(this).addClass('blue');
+
+        //        $('#zebra tbody tr:even').mouseout(function () {
+        //            $(this).removeClass('blue');
+        //            $(this).addClass('zebra');
+        //        });
+        //    });
+        //    $('#zebra tbody tr:odd').mouseover(function () {
+        //        $(this).addClass('grey');
+
+        //        $('#zebra tbody tr:odd').mouseout(function () {
+        //            $(this).removeClass('grey');
+        //        });
+
+        //    });
+        //    /*HOVER's: end*/
+        //    $(".menuIzq").find('a[href="#"]').attr("title", "Próximamente estará disponible");
+
+        //    $(".menuIzq").find('a[href="#"]').click(function () {
+        //        return false;
+        //    });
+        //});
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function (e) {
+            $('#LoadPage').load('http://google.com', function (data) {
+                $(this).html(data)
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".submenuIzq").on('click', function (event) {
+
+                var sub = $(this);
+                if (sub.hasClass("submenuOculto")) {
+                    sub.addClass("submenuVisible").removeClass("submenuOculto");
+                    return false;
+                }
+
+                else {
+
+                    if ($(event.target).first().parents("li").first().hasClass("submenuVisible")) {
+                        sub.addClass("submenuOculto").removeClass("submenuVisible");
+                        // return false;
+                    }
+                }
+            });
+        });
+
+        //Capitaliza todos los titulos de las páginas 
+        $(document).ready(function (e) {
+            $('#LoadPage').load('http://google.com', function (data) {
+                $(this).html(data)
+            });
+            $('.titulo').append("<hr class='red' style='margin-bottom: 40px;' />");
+            $('.tituloSubtema').append("<hr class='red' style='margin-bottom: 40px;' />")
+            $('.tituloSIM').append("<hr class='red' style='margin-bottom: 40px;' />")
+            $('.tituloSIM2').append("<hr class='red' style='margin-bottom: 30px;' />")
+            $('.tituloN2').append("<hr class='red' style='margin-bottom: 40px;' />");
+        });
+    </script>
+
+    <!-- SCRIPT DE GOOGLE ANALYTICS PARA ESTADISTICAS -->
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-146492062-1', 'auto');
+        ga('send', 'pageview');
+
+        $(document).ready(function () {
+            $('ul.nav li.dropdown').hover(function () {
+                $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(200);
+            }, function () {
+                $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(200);
+            });
+        });
+    </script>
+    <!--Temporal para modificar el posicionamiento del alert por las elecciones-->
+    <style>
+	.alert{ 
+	      margin-bottom: 0;
+	      border-radius: 0;
+	      width:100%;
+	      position:fixed;
+	      z-index:1030;
+	      top:86px;
+	    }
+
+   .modal-backdrop {
+    opacity: .5;
+    
+}
+   </style>
+
+    
+
+
+    <style type="text/css">
+        @import '/Paginas/SIM/estilos/jquery.webui-popover.min.css';
+        @import '/Paginas/SIM/estilos/GraficaBaseCENACE.css';
+        @import '/Paginas/SIM/estilos/GridView.css';
+        @import '/Paginas/SIM/estilos/daterangepicker.css';
+        @import '/styles/PaginasNivel2.css';
+        /*th {
+            text-align: center;
+            border-style: none
+        }
+
+        td {
+            border-style: none;
+        }*/
+        /*span.textoNotaAclaratoria {
+            display: contents;
+            position: relative;
+            text-align: justify;
+        }
+
+        span.fechaNotaAclaratoria {
+            padding-right: 20px
+        }*/
+    </style>
+
+    <script type="text/javascript" src='/Paginas/SIM/scripts/GraficaBaseCENACE.js'></script>
+    <script type="text/javascript" src='/Paginas/SIM/scripts/jquery.webui-popover.min.js'></script>
+    <script type="text/javascript" src='/Paginas/SIM/scripts/jquery331.js'></script>
+    <script type="text/javascript" src='/Paginas/SIM/scripts/moment.min.js'></script>
+    <script type="text/javascript" src='/Paginas/SIM/scripts/daterangepicker.min.js'></script>
+
+</head>
+<!--INICIA ENCABEZADO -->
+<body id="top" style="margin: 0px; padding: 80px 0px 0px 0px;">
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" >
+       <div class="container">
+           <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarMainCollapse"><span class="sr-only">Interruptor de Navegación</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="https://www.gob.mx/"><img src="https://framework-gb.cdn.gob.mx/landing/img/logoheader.svg" width="128" height="48" alt="Página de inicio, Gobierno de México"></a></div><div class="collapse navbar-collapse" id="navbarMainCollapse"><ul class="nav navbar-nav navbar-right"><li><a href="https://www.gob.mx/tramites">Trámites</a></li><li><a href="https://www.gob.mx/gobierno">Gobierno</a></li><li><a href="https://www.gob.mx/busqueda"><span class="sr-only">Búsqueda</span><i class="icon-search"></i></a></li></ul></div></div></nav>
+    </header>
+      <nav class="navbar navbar-inverse sub-navbar navbar-fixed-top" style="margin-top:80px;" >
+                <div class="container-fluid" style="padding-right: 0px;padding-left:0px;">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#subenlaces">
+                            <span class="sr-only">Interruptor de Navegación</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"></a>
+                  </div>
+                    <div class="collapse navbar-collapse" id="subenlaces">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="http://www.gob.mx/cenace/archivo/articulos">Blog</a></li>
+                            <li><a href="http://www.gob.mx/cenace/archivo/multimedia">Multimedia</a></li>
+                            <li><a href="http://www.gob.mx/cenace/archivo/prensa">Prensa</a></li>
+                            <li><a href="https://www.gob.mx/cenace/es/archivo/documentos">Documentos</a></li>
+                            <li><a href="https://www.gob.mx/cenace/es/#2688">Contacto</a></li>
+                            <li><a href="http://www.gob.mx/cenace/archivo/acciones_y_programas">Acciones y Programas</a></li>
+                            <li><a href="/APSIM.aspx">SIM</a></li>
+                            <li><a href="/Transparencia.aspx">Transparencia</a></li>
+                            <li><a href="/ProteccionDatosPersonales.aspx">Protección de Datos Personales</a></li>
+                        </ul>
+                    </div>
+                          
+                </div>
+            </nav>
+          
+
+        <!--Quitar el estilo. Es temporal para modificar el posicionamiento del alert por las elecciones-->
+        <form method="post" action="./PreEnerServConMDA.aspx" id="form2" style="padding-top:80px">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+
+<script src="/ScriptResource.axd?d=-OoKg2sreSVTmu6ZtYgZVFEsV1vIm1c9JCW4z1tB66CGa65YGnZ85BRCS_3nRUsax2vaXHetzdcLQrgCraazov0vX5Q72Bcqp211zashGscOPn3A7PcLH4HySmoLF34Y0&amp;t=51e37521" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="35C9E14B" />
+<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+            <div id="espacioentremenutitulocontacto">
+            </div>
+            <div id="contenido" class="wrapper col4">
+                
+    
+
+    <main class="page">
+
+        <div class="container-fluid vertical-buffer_ ">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="imagenN2"  >
+                        <img src="../../../2023-10-17 logo-SIM.svg" alt="Logo SIM mini" style="width: 100%;" />
+                    </div>
+                    <div style="display: inline-block; width: 90%; float: right; padding-left: 30px;">
+                        <div class="tituloN2" style="display: inline-block">Precios de Energía y Servicios Conexos MDA</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <section>
+
+                <div role="form">
+                    <div class="row">
+                        <div id="ContentPlaceHolder1_upSeccionA">
+	
+
+                                <div class="col-md-2">
+                                    <div class="form-groupN2">
+                                        <p class=" text-centerN2 custom-etiquetaN2 ">Reporte:</p>
+                                        <div class="text-centerN2">
+                                            <select name="ctl00$ContentPlaceHolder1$ddlReporte" id="ContentPlaceHolder1_ddlReporte" class="btn btn-default btn-sm ddlReporte ">
+		<option selected="selected" value="359,322">Precios Marginales Locales MDA</option>
+		<option value="360,323">Precios en Nodos Distribuidos MDA</option>
+		<option value="361,324">Precios de Servicios Conexos MDA</option>
+
+	</select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <p class=" text-centerN2 custom-etiquetaN2 " >Periodicidad:</p>
+                                        <div class="text-center">
+                                            <select name="ctl00$ContentPlaceHolder1$ddlPeriodicidad" id="ContentPlaceHolder1_ddlPeriodicidad" class="btn btn-default btn-sm ddlReporte ">
+		<option selected="selected" value="D">Diaria</option>
+		<option value="M">Mensual</option>
+
+	</select>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group ">
+                                        <p class="form-text text-centerN2 custom-etiquetaN2 ">Sistema:</p>
+                                        <div class="text-center">
+                                            <select name="ctl00$ContentPlaceHolder1$ddlSistema" id="ContentPlaceHolder1_ddlSistema" class="btn btn-default btn-sm">
+		<option selected="selected" value="SIN" MIN_FECHA_DATOS="29/01/2016" MAX_FECHA_DATOS="27/09/2026">SIN</option>
+		<option value="BCS" MIN_FECHA_DATOS="23/03/2016" MAX_FECHA_DATOS="27/09/2026">BCS</option>
+		<option value="BCA" MIN_FECHA_DATOS="27/01/2016" MAX_FECHA_DATOS="27/09/2026">BCA</option>
+
+	</select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group has-feedback">
+                                        <label class="text-centerN2 custom-etiquetaN2 ">Dia de Operación:&nbsp;&nbsp;</label><i class=" glyphicon glyphicon-question-sign webui-dr"></i>
+
+                                        <input name="ctl00$ContentPlaceHolder1$txtPeriodo" type="text" value="27/09/2026-27/09/2026" id="ContentPlaceHolder1_txtPeriodo" class="form-control input-sm text-center" onkeydown="javascript:return false;" style="background: #fff; cursor: pointer; border: 1px solid #ccc;" />
+                                        <i class="glyphicon glyphicon-calendar form-control-feedback"></i>
+                                    </div>
+
+                                </div>
+                                <input type="hidden" name="ctl00$ContentPlaceHolder1$hdfStartDateSelected" id="ContentPlaceHolder1_hdfStartDateSelected" value="27/09/2026" />
+                                <input type="hidden" name="ctl00$ContentPlaceHolder1$hdfEndDateSelected" id="ContentPlaceHolder1_hdfEndDateSelected" value="27/09/2026" />
+                                <input type="hidden" name="ctl00$ContentPlaceHolder1$hdfMinDateToSelect" id="ContentPlaceHolder1_hdfMinDateToSelect" value="29/01/2016" />
+                                <input type="hidden" name="ctl00$ContentPlaceHolder1$hdfMaxDateToSelect" id="ContentPlaceHolder1_hdfMaxDateToSelect" value="27/09/2026" />
+
+
+                            
+</div>
+
+
+                        <div class="col-md-6" style="padding-left: 25px; padding-right: 25px">
+                            <div id="ContentPlaceHolder1_UpdateProgress2" style="display:none;">
+	
+                                    <div class="custom-procesando">Procesando...</div>
+                                
+</div>
+                            <div id="ContentPlaceHolder1_PageUpdateProgress" style="display:none;">
+	
+                                    <div class="custom-procesando">Procesando...</div>
+                                
+</div>
+                            <div id="ContentPlaceHolder1_upSeccionB">
+	
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <p class="subtituloPagina">
+                                                <span id="ContentPlaceHolder1_lblNombreReporte">Precios Marginales Locales MDA</span>
+                                                <i class="icon-search pull-right" style="color: black"></i>
+                                            </p>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="GridViewRound">
+                                                <div>
+
+	</div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="row ">
+                                        <div class="col-md-12">
+                                            <div id="alertDescarga" class="alert alert-dismissible fade in" style="display: none; margin-top: 25px">
+                                                <button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="true">×</button>
+                                                <p id="mensajeError"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row ">
+                                        <div class="col-md-12">
+                                            <div class="notaInformativa">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                
+</div>
+
+
+                            <div class="row space-btnDescargar">
+                                <div class="col-md-12">
+                                    <div id="ContentPlaceHolder1_updSeccionBDescargar">
+	
+                                            <input type="submit" name="ctl00$ContentPlaceHolder1$btnDescargarZIP" value="Descargar ZIP" id="ContentPlaceHolder1_btnDescargarZIP" class="btn btn-default btn-sm pull-right webui" />
+                                        
+</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="row">
+                                <div class="col-md-12 textoladoderechoN2" >
+                                    <p>Para cada hora del Día de Operación correspondiente y para cada NodoP, el CENACE calcula los Precios Marginales Locales (PML) y los Precios en Nodos Distribuidos (PND) del Mercado del Día en Adelanto y sus componentes: energía, congestión y pérdidas.</p>
+                                    <p>De igual forma, para cada hora del Día de Operación correspondiente y para cada Zona de Reserva, el CENACE calcula los Precios de Servicios Conexos (PSC) del Mercado del Día en Adelanto.</p>
+                                    <p>Para dar cumplimiento al numeral 3.1.4, inciso (b), del Manual del Sistema de Información del Mercado, en esta página se encuentran alojados los siguientes reportes:</p>
+
+                                    <p>
+                                        -	Precios Marginales Locales MDA, definidos como los precios de la energía eléctrica en NodosP determinados del Sistema Eléctrico Nacional.
+                                    <br />
+                                        -	Precios en Nodos Distribuidos MDA, definidos como los precios medios ponderados en cada Zona de Carga. 
+                                    <br />
+
+                                        -	Precios de Servicios Conexos MDA, definidos como los precios asociados a los servicios vinculados a la operación del Sistema Eléctrico Nacional que son necesarios para garantizar su Calidad, Confiabilidad, Continuidad y Seguridad. 
+                                    </p>
+
+                                    <p>Para descargar los reportes antes mencionados, los siguientes Servicios Web pueden ejecutarse de acuerdo con las especificaciones de sus manuales respectivos:</p>
+
+                                    <ul>
+                                        <li>
+                                            <a href="/DocsMEM/2022-06-24 Manual Técnico SW-PML.pdf" target="_blank">Servicio Web – PML</a>
+                                        </li>
+                                        <li>
+                                            <a href="/DocsMEM/2022-06-24 Manual Técnico SW-PEND.pdf" target="_blank">Servicio Web – PEND</a>
+                                        </li>
+                                        <li>
+                                            <a href="/DocsMEM/2022-06-24 Manual Técnico SW-PSC.pdf" target="_blank">Servicio Web – PSC</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-4">
+                            <hr />
+                        </div>
+                    </div>
+
+                    <div class="row hide_">
+                        <div class="col-md-12 custom-text  text-justify">
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </section>
+
+            <section>
+
+                <div class="contenido_" style="width: 80%; float: left; overflow-y: auto; margin-left: 50px; padding-top: 50px;">
+
+                    
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="tituloPaginaN2">Reportes originales de Precios de Energía y Servicios Conexos</h1>
+                            <hr class="red" />
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-12 textoInferiorN2">
+                            <p>
+                                El CENACE puede realizar recálculos en los precios de energía y servicios conexos, por diversas razones. 
+                                 De conformidad con lo que establecen los numerales 2.3.5, fracción xiii y 9.1.6, del Manual del Vigilancia del Mercado, se debe poner a disposición del público en general los precios de mercado originales y los precios resultantes.
+                            </p>
+                            <p>
+                                En esta sección se podrán consultar los reportes originales de precios de energía y servicios conexos, 
+                                que por diversas razones se han recalculado. Además, se podrán consultar otros reportes que han sido republicados por el CENACE.  La información que aquí se presenta es de carácter indicativo, su objetivo es mostrar la trazabilidad en la ejecución del Mercado, por lo que esta información no puede ser utilizada para otros efectos diferentes a los demostrativos a los que aquí se mencionan.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <div id="accordion" style="width: 100%">
+                                <div class="acordionTitulo">Republicación de Reportes de Precios</div>
+
+                                <div class="divInternorepublicacionesN2" ">
+                                    <div>
+	<table class="table table-striped" cellspacing="0" AutoGenerateRows="False" id="ContentPlaceHolder1_GVprecios" width="100%">
+		<tr>
+			<th class="HeaderStyleAccordeon" align="center" scope="col" width="95%">Descripción</th><th class="HeaderStyleAccordeon" scope="col" width="5%">Descargable</th>
+		</tr><tr>
+			<td class="ItemStyleAccordeon">
+                                                    
+                                                    <span id="ContentPlaceHolder1_GVprecios_Label1_0" class="textoNotaAclaratoria">Por medio de la presente se informa que derivado de un problema técnico con la consola de publicación de Resultados del Mercado de Día en Adelanto (MDA), se republican los Precios Marginales Locales (PML), Precios en Nodos Distribuidos (PND) y Precios de Servicios Conexos (PSC) correspondiente a la ejecución del MDA del Sistema Interconectado Nacional (SIN) de fecha 23 de marzo de 2024.
+Con la republicación no existe modificación sobre los PML, PND y PSC, calculados, ni sobre asignación y despacho de energía y servicios conexos.</span>
+                                                    
+                                                </td><td class="ItemStyle" align="center">
+                                                    
+                                                    <a id="ContentPlaceHolder1_GVprecios_docto_0" href="/Docs/01_MECP/PreciosOriginalesMDA/2024-MAR-22%20Pub%20Original%20MDA%20SIN%20D%c3%ada%20de%20Operaci%c3%b3n%202024%20MAR-23.zip" target="_blank"><img class="icono32" src="/images/zip.png" /></a>
+                                                </td>
+		</tr><tr>
+			<td class="ItemStyleAccordeon">
+                                                    
+                                                    <span id="ContentPlaceHolder1_GVprecios_Label1_1" class="textoNotaAclaratoria">Por medio del presente se informa a los Participantes de Mercado que se realizó la republicación de los reportes de Precios Marginales Locales (PML), Precios en Nodos Distribuidos (PND) y Precios de Servicios Conexos (PSC) del Mercado de Tiempo Real del Sistema Interconectado Nacional, correspondiente al Día de Operación 12 de octubre del 2022.</span>
+                                                    
+                                                </td><td class="ItemStyle" align="center">
+                                                    
+                                                    <a id="ContentPlaceHolder1_GVprecios_docto_1" href="/Docs/01_MECP/PreciosOriginalesMDA/2022-OCT-15%20Pub%20Original%20MTR%20SIN%20D%c3%ada%20de%20Operaci%c3%b3n%202022-OCT-12.zip" target="_blank"><img class="icono32" src="/images/zip.png" /></a>
+                                                </td>
+		</tr><tr>
+			<td class="ItemStyleAccordeon">
+                                                    
+                                                    <span id="ContentPlaceHolder1_GVprecios_Label1_2" class="textoNotaAclaratoria">El 30 de diciembre de 2019 el CENACE republicó los escenarios del Mercado del Día en Adelanto (MDA) de los Sistemas Interconectados Baja California (BCA) y Baja California Sur (BCS), correspondientes al Día de Operación 31 de diciembre de 2019.</span>
+                                                    
+                                                </td><td class="ItemStyle" align="center">
+                                                    
+                                                    <a id="ContentPlaceHolder1_GVprecios_docto_2" href="/Docs/01_MECP/PreciosOriginalesMDA/2019-12-30%20Pub%20Original%20MDA%20BCA%20y%20BCS%20D%c3%ada%20de%20Operaci%c3%b3n%20(20191231).zip" target="_blank"><img class="icono32" src="/images/zip.png" /></a>
+                                                </td>
+		</tr><tr>
+			<td class="ItemStyleAccordeon">
+                                                    
+                                                    <span id="ContentPlaceHolder1_GVprecios_Label1_3" class="textoNotaAclaratoria">El 07 de junio de 2019 el CENACE republicó el escenario del Mercado del Día en Adelanto (MDA) del Sistema Interconectado Nacional (SIN), correspondiente al Día de Operación 02 de junio de 2019, derivado de una inconsistencia en el proceso de transferencia de datos del programa de exportaciones hacia el Sistema de Información de Mercado (SIM). Con la republicación no existe afectación sobre los resultados originalmente publicados, únicamente se mantiene la consistencia con la información publicada en el SIM, referente al programa de exportación del MDA.</span>
+                                                    
+                                                </td><td class="ItemStyle" align="center">
+                                                    
+                                                    <a id="ContentPlaceHolder1_GVprecios_docto_3" href="/Docs/01_MECP/PreciosOriginalesMDA/2019-06-07%20Pub%20Original%20MDA%20SIN%20D%c3%ada%20de%20Operaci%c3%b3n%20(20190602).zip" target="_blank"><img class="icono32" src="/images/zip.png" /></a>
+                                                </td>
+		</tr><tr>
+			<td class="ItemStyleAccordeon">
+                                                    
+                                                    <span id="ContentPlaceHolder1_GVprecios_Label1_4" class="textoNotaAclaratoria">El 06 de junio de 2019 el CENACE republicó los escenarios del Mercado del Día en Adelanto (MDA) del Sistema Interconectado Baja California Sur (BCS), correspondientes a los Días de Operación del 22 al 31 de mayo de 2019, por detectar una inconsistenca en el modelo de red, el cual originalmente consideró al Nodo 07ROF-115 como un NodoC y no un NodoP. Con la republicación no existe afectación sobre los resultados originalmente publicados, únicamente se incluyen los Precios Marginales Locales asociados al NodoP 07ROF-115.</span>
+                                                    
+                                                </td><td class="ItemStyle" align="center">
+                                                    
+                                                    <a id="ContentPlaceHolder1_GVprecios_docto_4" href="/Docs/01_MECP/PreciosOriginalesMDA/2019-06-06%20Pub%20Original%20MDA%20BCS%20D%c3%adas%20de%20Operaci%c3%b3n%20(20190522-20190531).zip" target="_blank"><img class="icono32" src="/images/zip.png" /></a>
+                                                </td>
+		</tr><tr>
+			<td class="ItemStyleAccordeon">
+                                                    
+                                                    <span id="ContentPlaceHolder1_GVprecios_Label1_5" class="textoNotaAclaratoria">El 03 de mayo de 2019 el CENACE republicó los Precios Marginales Locales del MDA del Sistema Interconectado Baja California (BCA), correspondientes a los Días de Operación 25 y 26 de abril de 2019, por detectar una inconsistencia en el modelo de red, el cual originalmente consideró al Nodo 07END-69 como un NodoC y no un NodoP.</span>
+                                                    
+                                                </td><td class="ItemStyle" align="center">
+                                                    
+                                                    <a id="ContentPlaceHolder1_GVprecios_docto_5" href="/Docs/01_MECP/PreciosOriginalesMDA/2019-05-03%20Pub%20Original%20MDA%20BCA%20D%c3%adas%20de%20Operaci%c3%b3n%20(20190424,%2020190426).zip" target="_blank"><img class="icono32" src="/images/zip.png" /></a>
+                                                </td>
+		</tr><tr>
+			<td class="ItemStyleAccordeon">
+                                                    
+                                                    <span id="ContentPlaceHolder1_GVprecios_Label1_6" class="textoNotaAclaratoria">El 21 de febrero de 2019 el CENACE recalculó los Precios Marginales Locales, los Precios en Nodos Distribuidos y los Precios de Servicios Conexos del MDA del Sistema Interconectado Nacional (SIN), correspondientes al Día de Operación 15 de febrero de 2019.</span>
+                                                    
+                                                </td><td class="ItemStyle" align="center">
+                                                    
+                                                    <a id="ContentPlaceHolder1_GVprecios_docto_6" href="/Docs/01_MECP/PreciosOriginalesMDA/2019-02-21%20Pub%20Original%20MDA%20SIN%20D%c3%ada%20de%20Operaci%c3%b3n%20(20190215).zip" target="_blank"><img class="icono32" src="/images/zip.png" /></a>
+                                                </td>
+		</tr><tr>
+			<td class="ItemStyleAccordeon">
+                                                    
+                                                    <span id="ContentPlaceHolder1_GVprecios_Label1_7" class="textoNotaAclaratoria">El 02-agosto-2018 el CENACE recalculó los Precios Marginales Locales, los Precios en Nodos Distribuidos y los Precios de Servicios Conexos del MDA del Sistema Interconectado Nacional (SIN) del Día de Operación 25 de julio de 2018, por detectar errores sistémicos en la determinación de dichos precios.</span>
+                                                    
+                                                </td><td class="ItemStyle" align="center">
+                                                    
+                                                    <a id="ContentPlaceHolder1_GVprecios_docto_7" href="/Docs/01_MECP/PreciosOriginalesMDA/2018-08-02%20Rec%c3%a1lculo%20de%20PML,%20PND%20y%20PSC%20en%20SIN%20(20180725).zip" target="_blank"><img class="icono32" src="/images/zip.png" /></a>
+                                                </td>
+		</tr><tr>
+			<td class="ItemStyleAccordeon">
+                                                    
+                                                    <span id="ContentPlaceHolder1_GVprecios_Label1_8" class="textoNotaAclaratoria">El 01-agosto-2018 el CENACE recalculó los Precios Marginales Locales, los Precios en Nodos Distribuidos y los Precios de Servicios Conexos del MDA del Sistema Interconectado Nacional (SIN) del Día de Operación 25 de julio de 2018, por detectar errores sistémicos en la determinación de dichos precios.</span>
+                                                    
+                                                </td><td class="ItemStyle" align="center">
+                                                    
+                                                    <a id="ContentPlaceHolder1_GVprecios_docto_8" href="/Docs/01_MECP/PreciosOriginalesMDA/2018-08-01%20Rec%c3%a1lculo%20de%20PML,%20PND%20y%20PSC%20en%20SIN%20(20180725).zip" target="_blank"><img class="icono32" src="/images/zip.png" /></a>
+                                                </td>
+		</tr><tr>
+			<td class="ItemStyleAccordeon">
+                                                    
+                                                    <span id="ContentPlaceHolder1_GVprecios_Label1_9" class="textoNotaAclaratoria">El 27-julio-2018 el CENACE recalculó los Precios Marginales Locales del MDA del NodoP 07IVY-230 del Sistema Baja California (BCA) para los Días de Operación 25, 26 y 27 de julio de 2018, por detectar información inconsistente.</span>
+                                                    
+                                                </td><td class="ItemStyle" align="center">
+                                                    
+                                                    <a id="ContentPlaceHolder1_GVprecios_docto_9" href="/Docs/01_MECP/PreciosOriginalesMDA/2018-07-27%20Rec%c3%a1lculo%20de%20PML%20en%20NodoP%2007IVY-230%20BCA%20(20180725,%2020180726,%2020180727).zip" target="_blank"><img class="icono32" src="/images/zip.png" /></a>
+                                                </td>
+		</tr><tr>
+			<td class="ItemStyleAccordeon">
+                                                    
+                                                    <span id="ContentPlaceHolder1_GVprecios_Label1_10" class="textoNotaAclaratoria">El 07-mayo-2018 el CENACE recalculó los Precios Marginales Locales y los Precios en Nodos Distribuidos del MDA del Sistema Baja California (BCA) del Día de Operación 8 de mayo de 2018, por detectar información inconsistente en la hora 21.</span>
+                                                    
+                                                </td><td class="ItemStyle" align="center">
+                                                    
+                                                    <a id="ContentPlaceHolder1_GVprecios_docto_10" href="/Docs/01_MECP/PreciosOriginalesMDA/2018-05-07%20Rec%c3%a1lculo%20de%20PML%20y%20PND%20en%20BCA%20(20180508).zip" target="_blank"><img class="icono32" src="/images/zip.png" /></a>
+                                                </td>
+		</tr><tr>
+			<td class="ItemStyleAccordeon">
+                                                    
+                                                    <span id="ContentPlaceHolder1_GVprecios_Label1_11" class="textoNotaAclaratoria">La Autoridad de Vigilancia del Mercado instruyó al CENACE realizar el recálculo de los Precios de Servicios Conexos del MDA de los Días de Operación 6, 7 y 8 de septiembre de 2016 para la Zona 4 del Sistema Interconectado Nacional (SIN). El CENACE completó la republicación de los reportes el 15-octubre-2016.</span>
+                                                    
+                                                </td><td class="ItemStyle" align="center">
+                                                    
+                                                    <a id="ContentPlaceHolder1_GVprecios_docto_11" href="/Docs/01_MECP/PreciosOriginalesMDA/2016-10-15%20AVM%20instruye%20rec%c3%a1lculo%20de%20PSC.zip" target="_blank"><img class="icono32" src="/images/zip.png" /></a>
+                                                </td>
+		</tr><tr>
+			<td class="ItemStyleAccordeon">
+                                                    
+                                                    <span id="ContentPlaceHolder1_GVprecios_Label1_12" class="textoNotaAclaratoria">La Autoridad de Vigilancia del Mercado instruyó al CENACE realizar el recálculo de los Precios de Energía y Servicios Conexos del MDA, del inicio de operaciones del Mercado al Día de Operación 29 de julio de 2016 para los tres sistemas, Baja California (BCA), Baja California Sur (BCS) e Interconectado Nacional (SIN). El CENACE completó la republicación de los reportes el 21-agosto-2016.</span>
+                                                    
+                                                </td><td class="ItemStyle" align="center">
+                                                    
+                                                    <a id="ContentPlaceHolder1_GVprecios_docto_12" href="/Docs/01_MECP/PreciosOriginalesMDA/2016-08-21%20AVM%20instruye%20rec%c3%a1lculo.zip" target="_blank"><img class="icono32" src="/images/zip.png" /></a>
+                                                </td>
+		</tr>
+	</table>
+</div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div id="ContentPlaceHolder1_pnlMuestraMapa" class="modalPopUp" style="display: none">
+	
+                    <table id="ContentPlaceHolder1_Table1" class="tableCompromisoManual" width="100%">
+		<tr>
+			<td class="tableCompromisoManual">
+                                <div class="iconoCerrar">
+                                    <input type="image" name="ctl00$ContentPlaceHolder1$btnCerrarPanel" id="ContentPlaceHolder1_btnCerrarPanel" src="../../../images/MercadoOperacion/delete.jpg" align="right" />
+                                </div>
+                            </td>
+		</tr>
+	</table>
+
+                    <img src="../../../images/MercadoOperacion/Mapa%20CTCP.png" height="700" width="900" />
+
+                
+</div>
+
+            </section>
+
+        </div>
+    </main>
+
+    <a data-toggle="tooltip" class="hide" title="" id="back-up" target="_blank" href="#" data-original-title="Back up" style="bottom: 0px;">
+        <i class="glyphicon glyphicon-chevron-up" style="color: white"></i>
+    </a>
+
+    <script type="text/javascript">
+
+        var j = jQuery.noConflict(true);
+
+        var app = Sys.Application;
+        app.add_init(ApplicationInit);
+
+        // Application event handlers for component developers.
+        function ApplicationInit(sender) {
+
+            var prm = Sys.WebForms.PageRequestManager.getInstance();
+
+            if (!prm.get_isInAsyncPostBack()) {
+
+                prm.add_pageLoaded(PageLoaded);
+            }
+            console.log("Inicialización de la aplicación");
+        }
+
+        // PageRequestManager event handlers.
+        function PageLoaded(sender, args) {
+
+            console.log("PageLoaded: Finalizando resultados de la solicitud asíncrona.");
+
+            ShowTooltips();
+            var controles = { periodicidad: "ContentPlaceHolder1_ddlPeriodicidad" };
+            var periodoSelected = j("#" + controles.periodicidad).val();
+            inicializarCalendario(periodoSelected); j('.prev').css({ 'position': 'static' });
+        }
+
+    </script>
+
+    <script type="text/javascript">
+
+        /*
+        ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+        │   La función se debe ejecutar hasta que se cargue la página para obtener los valores de los controles            │  
+        └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘  */
+
+        /*********************************************Inicializar el calendario****************************************/
+        function inicializarCalendario(periodicidad) {
+
+            //moment.locale('es');
+            j("div.daterangepicker").remove();
+            switch (periodicidad) {
+
+                case "D":
+                    console.log('calendarioDia:' + periodicidad);
+                    calendarioDia();
+                    break;
+                case "M":
+                    console.log('calendarioMes:' + periodicidad);
+                    calendarioMes();
+                    break;
+            }
+
+
+        }
+
+        /*********************************************calendarioDia()*************************************************************************/
+
+        function calendarioDia() {
+
+            var controlesDia = {
+                periodo: "ContentPlaceHolder1_txtPeriodo", sistema: "ContentPlaceHolder1_ddlSistema", reporte: "ContentPlaceHolder1_ddlReporte", periodicidad: "ContentPlaceHolder1_ddlPeriodicidad",
+                startDate: "ContentPlaceHolder1_hdfStartDateSelected", endDate: "ContentPlaceHolder1_hdfEndDateSelected",
+                minDate: "ContentPlaceHolder1_hdfMinDateToSelect", maxDate: "ContentPlaceHolder1_hdfMaxDateToSelect",
+            }
+            var calendarioDia = "#" + controlesDia.periodo;
+            var rangoDias = j("#" + controlesDia.periodo).val();
+
+            var Inicio = j("#" + controlesDia.startDate).val();
+            var Fin = j("#" + controlesDia.endDate).val();
+
+            var Minima = j("#" + controlesDia.minDate).val();
+            var Maxima = j("#" + controlesDia.maxDate).val();
+
+
+            j(calendarioDia).daterangepicker({
+                startDate: rangoDias.split('-')[0], endDate: rangoDias.split('-')[1], minDate: Minima, maxDate: Maxima,
+                dateLimit: { days: 90 },
+                "showDropdowns": true, autoApply: false, linkedCalendars: false, singleDatePicker: false,
+                opens: 'right', drops: 'down', separator: ' Até ',
+                locale: {
+                    format: 'DD/MM/YYYY', "weekLabel": "S", customRangeLabel: 'Personalizar', applyLabel: 'Aceptar', cancelLabel: 'Cerrar', fromLabel: 'De', toLabel: 'a',
+                    daysOfWeek: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa'],
+                    monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+                    //firstDay: 1,
+                },
+                isInvalidDate: function (date) { }, isCustomDate: function (date) { }
+
+            });//Fin de configuración end daterangepicker
+
+
+            /*********************************************Eventos DateRangePicker*************************************************************************/
+
+            j(calendarioDia).on('show.daterangepicker', function () { console.log("show day event fired"); });
+            j(calendarioDia).on('hide.daterangepicker', function () { console.log("hide day event fired"); });
+            j(calendarioDia).on('cancel.daterangepicker', function (ev, picker) { console.log("cancel day event fired"); });
+
+            j(calendarioDia).on('apply.daterangepicker', function (ev, picker) {
+                console.log("apply day event fired");
+                //console.log('Asignando fechas de nueva selección..');
+                //console.log("Cambio de selección de fechas" + picker.startDate.format('DD/MM/YYYY') + " " + picker.endDate.format('DD/MM/YYYY'));
+                j("#" + controlesDia.startDate).val(picker.startDate.format('DD/MM/YYYY'));
+                j("#" + controlesDia.endDate).val(picker.endDate.format('DD/MM/YYYY'));
+
+            });
+
+        }
+
+        /*********************************************calendarioMes()*************************************************************************/
+        function calendarioMes() {
+
+            var controlesMes = {
+                periodo: "ContentPlaceHolder1_txtPeriodo", sistema: "ContentPlaceHolder1_ddlSistema", reporte: "ContentPlaceHolder1_ddlReporte", periodicidad: "ContentPlaceHolder1_ddlPeriodicidad",
+                startDate: "ContentPlaceHolder1_hdfStartDateSelected", endDate: "ContentPlaceHolder1_hdfEndDateSelected",
+                minDate: "ContentPlaceHolder1_hdfMinDateToSelect", maxDate: "ContentPlaceHolder1_hdfMaxDateToSelect",
+            }
+            var calendarioMes = "#" + controlesMes.periodo;
+            var rangoMeses = j("#" + controlesMes.periodo).val();
+
+            var Inicio = j("#" + controlesMes.startDate).val();
+            var Fin = j("#" + controlesMes.endDate).val();
+
+            var Minima = j("#" + controlesMes.minDate).val();
+            var Maxima = j("#" + controlesMes.maxDate).val();
+
+            j(calendarioMes).daterangepicker({
+
+                startDate: rangoMeses.split('-')[0],
+                endDate: rangoMeses.split('-')[1],
+                minDate: Minima, maxDate: Maxima,
+                dateLimit: { days: 365 },
+                "showDropdowns": true, autoApply: false, linkedCalendars: false, singleDatePicker: false,
+                opens: 'right', drops: 'down', separator: ' Até ',
+                locale: {
+                    format: 'DD/MM/YYYY', "weekLabel": "S", customRangeLabel: 'Personalizar', applyLabel: 'Aceptar', cancelLabel: 'Cerrar', fromLabel: 'De', toLabel: 'a',
+                    daysOfWeek: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa'],
+                    monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+                    firstDay: 1,
+                },
+                isInvalidDate: function (date) { }, isCustomDate: function (date) { },
+            });//Fin de configuración end daterangepicker
+
+
+
+            /*********************************************Eventos DateRangePicker*************************************************************************/
+
+            j(calendarioMes).on('show.daterangepicker', function () { console.log("show month event fired"); });
+            j(calendarioMes).on('hide.daterangepicker', function () { console.log("hide month event fired"); });
+            j(calendarioMes).on('cancel.daterangepicker', function (ev, picker) { console.log("cancel month event fired"); });
+
+            j(calendarioMes).on('apply.daterangepicker', function (ev, picker) {
+                console.log("apply month event fired");
+                //console.log('Asignando fechas de nueva selección..');
+                //console.log("Cambio de selección de fechas" + picker.startDate.format('DD/MM/YYYY') + " " + picker.endDate.format('DD/MM/YYYY'));
+                j("#" + controlesMes.startDate).val(picker.startDate.format('DD/MM/YYYY'));
+                j("#" + controlesMes.endDate).val(picker.endDate.format('DD/MM/YYYY'));
+
+            });
+
+        }
+
+    </script>
+
+
+            </div>
+            <script src="/scripts/funciones.js" type="text/javascript"></script>
+            <script type="text/javascript" src="/scripts/classie.js"></script>
+            <script type="text/javascript">
+                var buttons7Click = Array.prototype.slice.call(document.querySelectorAll('#btn-click a')),
+                    totalButtons7Click = buttons7Click.length;
+
+                buttons7Click.forEach(function (el, i) { el.addEventListener('click', activate, false); });
+
+                function activate() {
+                    var self = this, activatedClass = 'btn-activated';
+
+                    if (!classie.has(this, activatedClass)) {
+                        classie.add(this, activatedClass);
+                        setTimeout(function () { classie.remove(self, activatedClass) }, 1000);
+                    }
+                }
+
+            </script>
+              <div style="height: 50px;">&nbsp;</div>
+        </form>
+
+<script src="https://framework-gb.cdn.gob.mx/gobmx.js"></script>
+<script src="https://framework-gb.cdn.gob.mx/assets/scripts/jquery-ui-datepicker.js"></script>
+</body>
+</html>
+<!--[if IE lte 9]>      
+<style>
+    head:first-child + body div[class].tableContainer {
+        height: 255px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        width: 740px;
+    }
+    head:first-child + body tbody[class].scrollContent {
+    height: 0px;
+    }   
+ </style>
+<![endif] -->

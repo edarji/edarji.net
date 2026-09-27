@@ -1,0 +1,6 @@
+__pycache__/
+*.py[cod]
+# Full INEGI source is retained locally; simplified geometry is published.
+pipeline/map-source/states-raw.json
+
+_site/

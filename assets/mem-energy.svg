@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" fill="none">
+  <title>MEM Monitor — gota de energía</title>
+  <desc>Emblema original: una gota azul de silueta asimétrica contiene un rayo claro.</desc>
+  <defs><linearGradient id="blue" x1="22" y1="18" x2="73" y2="87" gradientUnits="userSpaceOnUse"><stop stop-color="#78badc"/><stop offset=".55" stop-color="#245d89"/><stop offset="1" stop-color="#102e50"/></linearGradient></defs>
+  <path d="M53 7C48 24 19 39 18 59c-1 18 12 30 30 30s31-13 30-30C77 42 63 25 53 7Z" fill="url(#blue)" stroke="#91c5e0" stroke-width="2"/>
+  <path d="M53 28 33 56h15l-6 24 23-35H50Z" fill="#e4f3fa"/>
+  <path d="M26 61c0 10 6 17 14 20" stroke="#8ac5e4" stroke-width="2" stroke-linecap="round" opacity=".55"/>
+</svg>

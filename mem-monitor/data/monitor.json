@@ -1,0 +1,421 @@
+{
+  "schema_version": 2,
+  "mode": "official",
+  "timezone": "America/Mexico_City",
+  "generated_at": "2026-09-27T17:11:00.742386+00:00",
+  "demand": {
+    "system": "SIN",
+    "unit": "MW",
+    "series": [
+      {
+        "timestamp": "2026-09-27T11:10:24-06:00",
+        "value": 35747.0
+      }
+    ],
+    "period": "2026-09-27",
+    "source": {
+      "name": "CENACE · Demanda neta indicativa",
+      "url": "https://www.cenace.gob.mx/graficademanda.aspx"
+    },
+    "stale_after_hours": 2,
+    "status": "official",
+    "fetched_at": "2026-09-27T17:11:00.742386+00:00",
+    "last_attempt_at": "2026-09-27T17:11:00.742386+00:00",
+    "error": null
+  },
+  "pml": {
+    "system": "SIN",
+    "unit": "MXN/MWh",
+    "market": "MDA",
+    "nodes": [
+      {
+        "id": "06ESC-400",
+        "name": "Escobedo",
+        "municipality": "GENERAL ESCOBEDO",
+        "state": "NUEVO LEON",
+        "voltage": 400,
+        "series": [
+          {
+            "hour": 1,
+            "value": 1321.79
+          },
+          {
+            "hour": 2,
+            "value": 1194.68
+          },
+          {
+            "hour": 3,
+            "value": 1158.14
+          },
+          {
+            "hour": 4,
+            "value": 793.48
+          },
+          {
+            "hour": 5,
+            "value": 690.22
+          },
+          {
+            "hour": 6,
+            "value": 574.93
+          },
+          {
+            "hour": 7,
+            "value": 521.93
+          },
+          {
+            "hour": 8,
+            "value": 419.77
+          },
+          {
+            "hour": 9,
+            "value": 393.81
+          },
+          {
+            "hour": 10,
+            "value": 385.52
+          },
+          {
+            "hour": 11,
+            "value": 385.67
+          },
+          {
+            "hour": 12,
+            "value": 390.06
+          },
+          {
+            "hour": 13,
+            "value": 396.47
+          },
+          {
+            "hour": 14,
+            "value": 429.56
+          },
+          {
+            "hour": 15,
+            "value": 452.21
+          },
+          {
+            "hour": 16,
+            "value": 507.63
+          },
+          {
+            "hour": 17,
+            "value": 522.66
+          },
+          {
+            "hour": 18,
+            "value": 699.94
+          },
+          {
+            "hour": 19,
+            "value": 1377.94
+          },
+          {
+            "hour": 20,
+            "value": 1538.77
+          },
+          {
+            "hour": 21,
+            "value": 1470.29
+          },
+          {
+            "hour": 22,
+            "value": 1388.79
+          },
+          {
+            "hour": 23,
+            "value": 1339.52
+          },
+          {
+            "hour": 24,
+            "value": 1177.0
+          }
+        ]
+      },
+      {
+        "id": "03SAU-400",
+        "name": "El Sauz",
+        "municipality": "PEDRO ESCOBEDO",
+        "state": "QUERETARO",
+        "voltage": 400,
+        "series": [
+          {
+            "hour": 1,
+            "value": 1209.25
+          },
+          {
+            "hour": 2,
+            "value": 1103.08
+          },
+          {
+            "hour": 3,
+            "value": 1075.35
+          },
+          {
+            "hour": 4,
+            "value": 732.37
+          },
+          {
+            "hour": 5,
+            "value": 653.08
+          },
+          {
+            "hour": 6,
+            "value": 555.25
+          },
+          {
+            "hour": 7,
+            "value": 549.31
+          },
+          {
+            "hour": 8,
+            "value": 445.44
+          },
+          {
+            "hour": 9,
+            "value": 402.93
+          },
+          {
+            "hour": 10,
+            "value": 395.22
+          },
+          {
+            "hour": 11,
+            "value": 394.02
+          },
+          {
+            "hour": 12,
+            "value": 398.31
+          },
+          {
+            "hour": 13,
+            "value": 400.39
+          },
+          {
+            "hour": 14,
+            "value": 434.96
+          },
+          {
+            "hour": 15,
+            "value": 453.32
+          },
+          {
+            "hour": 16,
+            "value": 489.1
+          },
+          {
+            "hour": 17,
+            "value": 503.19
+          },
+          {
+            "hour": 18,
+            "value": 609.39
+          },
+          {
+            "hour": 19,
+            "value": 1196.52
+          },
+          {
+            "hour": 20,
+            "value": 1348.18
+          },
+          {
+            "hour": 21,
+            "value": 1294.12
+          },
+          {
+            "hour": 22,
+            "value": 1222.63
+          },
+          {
+            "hour": 23,
+            "value": 1181.72
+          },
+          {
+            "hour": 24,
+            "value": 1025.78
+          }
+        ]
+      },
+      {
+        "id": "08RMV-400",
+        "name": "Riviera Maya-Valladolid",
+        "municipality": "VALLADOLID",
+        "state": "YUCATAN",
+        "voltage": 400,
+        "series": [
+          {
+            "hour": 1,
+            "value": 2937.13
+          },
+          {
+            "hour": 2,
+            "value": 2613.49
+          },
+          {
+            "hour": 3,
+            "value": 2551.11
+          },
+          {
+            "hour": 4,
+            "value": 1486.66
+          },
+          {
+            "hour": 5,
+            "value": 1234.71
+          },
+          {
+            "hour": 6,
+            "value": 931.61
+          },
+          {
+            "hour": 7,
+            "value": 659.5
+          },
+          {
+            "hour": 8,
+            "value": 524.18
+          },
+          {
+            "hour": 9,
+            "value": 472.3
+          },
+          {
+            "hour": 10,
+            "value": 456.99
+          },
+          {
+            "hour": 11,
+            "value": 454.69
+          },
+          {
+            "hour": 12,
+            "value": 461.86
+          },
+          {
+            "hour": 13,
+            "value": 466.9
+          },
+          {
+            "hour": 14,
+            "value": 509.49
+          },
+          {
+            "hour": 15,
+            "value": 543.58
+          },
+          {
+            "hour": 16,
+            "value": 732.47
+          },
+          {
+            "hour": 17,
+            "value": 901.18
+          },
+          {
+            "hour": 18,
+            "value": 1498.31
+          },
+          {
+            "hour": 19,
+            "value": 2871.04
+          },
+          {
+            "hour": 20,
+            "value": 3279.14
+          },
+          {
+            "hour": 21,
+            "value": 3126.09
+          },
+          {
+            "hour": 22,
+            "value": 2932.4
+          },
+          {
+            "hour": 23,
+            "value": 2819.62
+          },
+          {
+            "hour": 24,
+            "value": 2374.37
+          }
+        ]
+      }
+    ],
+    "period": "2026-09-27",
+    "source": {
+      "name": "CENACE · Reporte horario MDA",
+      "url": "https://www.cenace.gob.mx/Paginas/SIM/Reportes/PreEnerServConMDA.aspx"
+    },
+    "stale_after_hours": 30,
+    "status": "official",
+    "fetched_at": "2026-09-27T17:20:58.582239+00:00",
+    "last_attempt_at": "2026-09-27T17:20:58.582239+00:00",
+    "error": null
+  },
+  "generation": {
+    "system": "SEN",
+    "unit": "MWh",
+    "items": [
+      {
+        "technology": "Eolica",
+        "value": 2488993.0361
+      },
+      {
+        "technology": "Fotovoltaica",
+        "value": 1889662.6349
+      },
+      {
+        "technology": "Biomasa",
+        "value": 1522.9645
+      },
+      {
+        "technology": "Carboelectrica",
+        "value": 1124713.4889
+      },
+      {
+        "technology": "Ciclo Combinado",
+        "value": 21980851.0319
+      },
+      {
+        "technology": "Combustion Interna",
+        "value": 465397.7589
+      },
+      {
+        "technology": "Geotermoelectrica",
+        "value": 218829.5331
+      },
+      {
+        "technology": "Hidroelectrica",
+        "value": 2055105.9872
+      },
+      {
+        "technology": "Nucleoelectrica",
+        "value": 1102288.6301
+      },
+      {
+        "technology": "Termica Convencional",
+        "value": 3001176.4975
+      },
+      {
+        "technology": "Turbo Gas",
+        "value": 1581623.7936
+      }
+    ],
+    "period": "2026-08",
+    "source": {
+      "name": "CENACE · Generación liquidada mensual",
+      "url": "https://www.cenace.gob.mx/Paginas/SIM/Reportes/EnergiaGeneradaTipoTec.aspx"
+    },
+    "stale_after_hours": 960,
+    "rows": 744,
+    "liquidation": "Original (L0)",
+    "published_label": "14/sep/2026 05:00:01 hrs.",
+    "status": "official",
+    "fetched_at": "2026-09-27T17:11:00.742386+00:00",
+    "last_attempt_at": "2026-09-27T17:11:00.742386+00:00",
+    "error": null
+  }
+}

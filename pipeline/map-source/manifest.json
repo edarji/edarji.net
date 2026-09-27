@@ -1,0 +1,18 @@
+{
+  "fetched_at": "2026-09-27T17:20:58.582239+00:00",
+  "sources": [
+    "https://www.cenace.gob.mx/Paginas/SIM/NodosP.aspx",
+    "https://www.cenace.gob.mx/Docs/01_MECP/CatalogoNodosP/2026/Cat%C3%A1logo%20NodosP%20Sistema%20El%C3%A9ctrico%20Nacional%20%28v2026-09-23%29.xlsx",
+    "https://www.cenace.gob.mx/Paginas/SIM/Reportes/PreEnerServConMDA.aspx",
+    "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgee/"
+  ],
+  "sha256": {
+    "states-raw.json": "170c3ea5ff472f08ece97970dc90ad4ba8c6f503e33859655f315091c105cc91",
+    "catalog.xlsx": "f23203685c3d63a70c8ed130aa66b754fddae6f27e7a67e4d0f4a527695dffae",
+    "report-page.html": "6295517dd13d19af8643ebfc20fff4f31620dd1e23b97533c9a39db3524f3943",
+    "catalog-page.html": "14b9c19b8cebcf2a9eca01ad6a9f537d97f679b4eca11ba206fa0c3b8212424a",
+    "SIN.zip": "8bd27c32c554fe39a0fa2403fc83f94fc6093819c8dd03727bd1e85fc3b01546",
+    "BCS.zip": "0fb081644775cb183aa2b2472f0808b288f5710f19eeb9da76688f74fbd3f943",
+    "BCA.zip": "1a6ada4f00d6f450c3fc04feff4220002955f987426d8f76d0231f7a8b21c26d"
+  }
+}

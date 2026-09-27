@@ -1,0 +1,489 @@
+
+
+<!DOCTYPE html>
+<!-- PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><title>
+	NodosP
+</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="imagetoolbar" content="no" /><meta name="viewport" content="width=device-width, initial-scale=1" /><script type="text/javascript" src="/ruxitagentjs_ICA7NQVfqrux_10323250822043923.js" data-dtconfig="rid=RID_-1645353397|rpid=1017181316|domain=cenace.gob.mx|reportUrl=/rb_bf23936fjy|app=6a50c656be6c2dd8|owasp=1|featureHash=ICA7NQVfqrux|msl=153600|srsr=30000|rdnt=0|uxrgce=1|cuc=ivxd4ocj|srms=2,1,0,0%2Ftextarea%2Cinput%2Cselect%2Coption;0%2Fdatalist;0%2Fform%20button;0%2F%5Bdata-dtrum-input%5D;0%2F.data-dtrum-input;1%2F%5Edata%28%28%5C-.%2B%24%29%7C%24%29|mel=100000|expw=1|dpvc=1|lastModification=1759936213979|tp=500,50,0|srbbv=2|agentUri=/ruxitagentjs_ICA7NQVfqrux_10323250822043923.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300" rel="stylesheet" type="text/css" /><link href="https://framework-gb.cdn.gob.mx/assets/styles/main.css" rel="stylesheet" /><link rel="stylesheet" href="/styles/layoutSIM.css" type="text/css" /><link rel="stylesheet" href="/styles/jquery-ui.css" type="text/css" /><link rel="stylesheet" href="/SIM/VISTA/styles/arbol.css" type="text/css" /><link href="https://framework-gb.cdn.gob.mx/favicon.ico" rel="shortcut icon" /><link href="../../styles/APSIMStyles.css" rel="stylesheet" /><link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/af-2.3.3/cr-1.5.0/fc-3.2.5/fh-3.1.4/kt-2.5.0/r-2.2.2/rg-1.1.0/rr-1.2.4/sc-2.0.0/sl-1.3.0/datatables.min.css" /> 
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.min.js"></script> <!-- la active nuevamente para capacitacion -->
+    <script type="text/javascript" src="/scripts/jquery-ui.js"></script>
+ 
+     
+   
+    <script type="text/javascript" src="/scripts/ddimgtooltip.js"></script>
+    
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/af-2.3.3/cr-1.5.0/fc-3.2.5/fh-3.1.4/kt-2.5.0/r-2.2.2/rg-1.1.0/rr-1.2.4/sc-2.0.0/sl-1.3.0/datatables.min.js"></script>
+  
+      <!-- Homepage Only Scripts -->
+  
+    <script type="text/javascript" src="/scripts/responsiveslides.js"></script>
+ 
+  
+    <!--<script src=“https://framework-gb.cdn.gob.mx/scripts/modal_sgb.js"></script>-->      
+    <!-- Respond.js soporte de media queries para Internet Explorer 8 -->
+    <!-- ie8.js EventTarget para cada nodo en Internet Explorer 8 -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/ie8/0.2.2/ie8.js"></script>
+    <![endif]-->
+      
+     
+
+    <script type="text/javascript">
+        $(function () {
+            $(".rslides").responsiveSlides();
+
+        });
+        function removeClassName(elem, className) {
+            elem.className = elem.className.replace(className, "").trim();
+        }
+        function addCSSClass(elem, className) {
+            removeClassName(elem, className);
+            elem.className = (elem.className + " " + className).trim();
+        }
+        String.prototype.trim = function () {
+            return this.replace(/^\s+|\s+$/, "");
+        }
+        //function stripedTable() {
+        //    if (document.getElementById && document.getElementsByTagName) {
+        //        var allTables = document.getElementsByTagName('table');
+        //        if (!allTables) { return; }
+        //        for (var i = 0; i < allTables.length; i++) {
+        //            if (allTables[i].className.match(/[\w\s ]*scrollTable[\w\s ]*/)) {
+        //                var trs = allTables[i].getElementsByTagName("tr");
+        //                for (var j = 0; j < trs.length; j++) {
+        //                    removeClassName(trs[j], 'alternateRow');
+        //                    addCSSClass(trs[j], 'normalRow');
+        //                }
+        //                for (var k = 0; k < trs.length; k += 2) {
+        //                    removeClassName(trs[k], 'normalRow');
+        //                    addCSSClass(trs[k], 'alternateRow');
+        //                }
+        //            }
+        //        }
+        //    }
+        //}
+        function addIEonScroll() {
+            var thisContainer = document.getElementById('tableContainer');
+            if (!thisContainer) { return; }
+            var onClickAction = 'toggleSelectBoxes();';
+            thisContainer.onscroll = new Function(onClickAction);
+        }
+        function toggleSelectBoxes() {
+            var thisContainer = document.getElementById('tableContainer');
+            var thisHeader = document.getElementById('fixedHeader');
+            if (!thisContainer || !thisHeader) { return; }
+            var selectBoxes = thisContainer.getElementsByTagName('select');
+            if (!selectBoxes) { return; }
+            for (var i = 0; i < selectBoxes.length; i++) {
+                if (thisContainer.scrollTop >= eval(selectBoxes[i].parentNode.offsetTop - thisHeader.offsetHeight)) {
+                    selectBoxes[i].style.visibility = 'hidden';
+                } else {
+                    selectBoxes[i].style.visibility = 'visible';
+                }
+            }
+        }
+        window.onload = function () {
+            stripedTable(); addIEonScroll();
+        }
+
+        //$(document).ready(function () {
+        //    $('#zebra tbody tr:even').addClass('zebra');
+        //    /*HOVER's: start*/
+        //    $('#zebra tbody tr:even').mouseover(function () {
+        //        $(this).removeClass('zebra');
+        //        $(this).addClass('blue');
+
+        //        $('#zebra tbody tr:even').mouseout(function () {
+        //            $(this).removeClass('blue');
+        //            $(this).addClass('zebra');
+        //        });
+        //    });
+        //    $('#zebra tbody tr:odd').mouseover(function () {
+        //        $(this).addClass('grey');
+
+        //        $('#zebra tbody tr:odd').mouseout(function () {
+        //            $(this).removeClass('grey');
+        //        });
+
+        //    });
+        //    /*HOVER's: end*/
+        //    $(".menuIzq").find('a[href="#"]').attr("title", "Próximamente estará disponible");
+
+        //    $(".menuIzq").find('a[href="#"]').click(function () {
+        //        return false;
+        //    });
+        //});
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function (e) {
+            $('#LoadPage').load('http://google.com', function (data) {
+                $(this).html(data)
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".submenuIzq").on('click', function (event) {
+
+                var sub = $(this);
+                if (sub.hasClass("submenuOculto")) {
+                    sub.addClass("submenuVisible").removeClass("submenuOculto");
+                    return false;
+                }
+
+                else {
+
+                    if ($(event.target).first().parents("li").first().hasClass("submenuVisible")) {
+                        sub.addClass("submenuOculto").removeClass("submenuVisible");
+                        // return false;
+                    }
+                }
+            });
+        });
+
+        //Capitaliza todos los titulos de las páginas 
+        $(document).ready(function (e) {
+            $('#LoadPage').load('http://google.com', function (data) {
+                $(this).html(data)
+            });
+            $('.titulo').append("<hr class='red' style='margin-bottom: 40px;' />");
+            $('.tituloSubtema').append("<hr class='red' style='margin-bottom: 40px;' />")
+            $('.tituloSIM').append("<hr class='red' style='margin-bottom: 40px;' />")
+            $('.tituloSIM2').append("<hr class='red' style='margin-bottom: 30px;' />")
+            $('.tituloN2').append("<hr class='red' style='margin-bottom: 40px;' />");
+        });
+    </script>
+
+    <!-- SCRIPT DE GOOGLE ANALYTICS PARA ESTADISTICAS -->
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-146492062-1', 'auto');
+        ga('send', 'pageview');
+
+        $(document).ready(function () {
+            $('ul.nav li.dropdown').hover(function () {
+                $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(200);
+            }, function () {
+                $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(200);
+            });
+        });
+    </script>
+    <!--Temporal para modificar el posicionamiento del alert por las elecciones-->
+    <style>
+	.alert{ 
+	      margin-bottom: 0;
+	      border-radius: 0;
+	      width:100%;
+	      position:fixed;
+	      z-index:1030;
+	      top:86px;
+	    }
+
+   .modal-backdrop {
+    opacity: .5;
+    
+}
+   </style>
+
+    
+    <link href="../../styles/PaginasNivel2.css" rel="stylesheet" />
+    <meta name="description" content="" />
+</head>
+<!--INICIA ENCABEZADO -->
+<body id="top" style="margin: 0px; padding: 80px 0px 0px 0px;">
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" >
+       <div class="container">
+           <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarMainCollapse"><span class="sr-only">Interruptor de Navegación</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="https://www.gob.mx/"><img src="https://framework-gb.cdn.gob.mx/landing/img/logoheader.svg" width="128" height="48" alt="Página de inicio, Gobierno de México"></a></div><div class="collapse navbar-collapse" id="navbarMainCollapse"><ul class="nav navbar-nav navbar-right"><li><a href="https://www.gob.mx/tramites">Trámites</a></li><li><a href="https://www.gob.mx/gobierno">Gobierno</a></li><li><a href="https://www.gob.mx/busqueda"><span class="sr-only">Búsqueda</span><i class="icon-search"></i></a></li></ul></div></div></nav>
+    </header>
+      <nav class="navbar navbar-inverse sub-navbar navbar-fixed-top" style="margin-top:80px;" >
+                <div class="container-fluid" style="padding-right: 0px;padding-left:0px;">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#subenlaces">
+                            <span class="sr-only">Interruptor de Navegación</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"></a>
+                  </div>
+                    <div class="collapse navbar-collapse" id="subenlaces">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="http://www.gob.mx/cenace/archivo/articulos">Blog</a></li>
+                            <li><a href="http://www.gob.mx/cenace/archivo/multimedia">Multimedia</a></li>
+                            <li><a href="http://www.gob.mx/cenace/archivo/prensa">Prensa</a></li>
+                            <li><a href="https://www.gob.mx/cenace/es/archivo/documentos">Documentos</a></li>
+                            <li><a href="https://www.gob.mx/cenace/es/#2688">Contacto</a></li>
+                            <li><a href="http://www.gob.mx/cenace/archivo/acciones_y_programas">Acciones y Programas</a></li>
+                            <li><a href="/APSIM.aspx">SIM</a></li>
+                            <li><a href="/Transparencia.aspx">Transparencia</a></li>
+                            <li><a href="/ProteccionDatosPersonales.aspx">Protección de Datos Personales</a></li>
+                        </ul>
+                    </div>
+                          
+                </div>
+            </nav>
+          
+
+        <!--Quitar el estilo. Es temporal para modificar el posicionamiento del alert por las elecciones-->
+        <form method="post" action="./NodosP.aspx" id="form2" style="padding-top:80px">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMzkxODMyMTQ5D2QWAmYPZBYCAgMPZBYCAgEPZBYCZg8QZA8WC2YCAQICAgMCBAIFAgYCBwIIAgkCChYLEAUEMjAyNgUEMjAyNmcQBQQyMDI1BQQyMDI1ZxAFBDIwMjQFBDIwMjRnEAUEMjAyMwUEMjAyM2cQBQQyMDIyBQQyMDIyZxAFBDIwMjEFBDIwMjFnEAUEMjAyMAUEMjAyMGcQBQQyMDE5BQQyMDE5ZxAFBDIwMTgFBDIwMThnEAUEMjAxNwUEMjAxN2cQBQQyMDE2BQQyMDE2ZxYBZmRkKB7pryV9aM0gNMxOc30+zhYJ0x/GzYJXLvLcc2aK2sg=" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CF0E584B" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAw1pQj9vZLUmxoniPsaF4p2YdaYN89f6toalBz+WYYnvfq9RFA0Bp8LBJfzdN0pF1t/FPEZpQ/rYc4xzVhQVQTWxSzN3enj65YGb25mmhssLY4GcK4QizQVCVywxBiAb8eit47r9ZIP163Ja+vVWfVRI/XlEOSi+MPDP0kcZKgS/PKBw9vaE0Z+FUdfxVrCd9D9l8aVv1Vvicewx6oKGwQb0VRo85eK8p5UrRKbPVqhImhtPgh7nuOJ4UdNQMKKO+9GRo1o05DEwW2nB1DtuEBJD8dGuQ02S98QFMzlD+JPfw==" />
+            <div id="espacioentremenutitulocontacto">
+            </div>
+            <div id="contenido" class="wrapper col4">
+                
+          
+        <div id="container" class="container-fluid vertical-buffer_ ">                
+            
+               <div class="row">
+                <div class="col-md-12">
+                    <div style="display: inline-block; width: 10%; float: left; line-height: 4em; text-align: left;" >
+                        <img src="../../2023-10-17 logo-SIM.svg" alt="Logo SIM mini" style="width: 100%;" />
+                    </div>
+                    <div style="display: inline-block; width: 90%; float: right; padding-left: 30px;">
+                        <div class="titulo" style="display: inline-block">Catálogo de NodosP</div>
+                    </div>
+                   </div>
+                </div>
+                
+                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 25px; padding-right: 15px;">
+                    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 text-left" style="padding-top: 0px; padding-right: 15px; ">
+                    
+                        <div class="text-center">
+                        <label style="width: 123px" class="text-centerN2 custom-etiquetaN2">Año:</label><br />
+                        <select name="ctl00$ContentPlaceHolder1$DrpAnio" id="ContentPlaceHolder1_DrpAnio" class="btn btn-default btn-sm ddlReporte">
+	<option selected="selected" value="2026">2026</option>
+	<option value="2025">2025</option>
+	<option value="2024">2024</option>
+	<option value="2023">2023</option>
+	<option value="2022">2022</option>
+	<option value="2021">2021</option>
+	<option value="2020">2020</option>
+	<option value="2019">2019</option>
+	<option value="2018">2018</option>
+	<option value="2017">2017</option>
+	<option value="2016">2016</option>
+
+</select>
+                        
+                            </div>
+                    </div>
+                    
+                    <div class=" col-md-6" style="width:53%;margin-left:1px;padding-left:2px;">
+                        <div class="contenidoCol1">
+                            <div class="t2">
+                                Catálogo de NodosP 
+                                <a href="../../../Docs/MercadoCortoPlazo/NotasTecnicas/MECP Catálogo de NodosP.pdf" class="icon-search" style="color: black; float:right; text-decoration-line:none" target="_blank"></a>
+                            </div> 
+                            <div id="panel0">
+                                <div class="contenidoTabs">
+                                    
+                                    <table style="width: 100%; font-size:14px;" class="table table-striped" >
+                                        <tr>
+                                            <th style="width: 55%">Nombre</th>
+                                            <th style="width: 15%" class="center">Reporte</th>
+                                            <th style="width: 30%" class="center">Fecha de actualización</th>
+                                        </tr>
+                                        
+                                        <tr>
+                                                                                        <td style="text-align: left; width: 55%; font-size: 14px;">
+                                            Catálogo NodosP Sistema Eléctrico Nacional (v2026-09-23)                               
+                                            </td>                                    
+                                            <td style="text-align: center; width: 10%; ">
+                                                <a href="/Docs/01_MECP/CatalogoNodosP/2026/Catálogo NodosP Sistema Eléctrico Nacional (v2026-09-23).xlsx" target="_blank">
+                                                <img alt="Excel" src="/images/iconos/xlsx.png " class="icono32" />
+                                                </a>
+                                            </td>
+                                            <td style="text-align: center; width: 30%; ">
+                                                23/09/2026
+                                            </td>
+                                        </tr>
+                                            
+                                        <tr>
+                                                                                        <td style="text-align: left; width: 55%; font-size: 14px;">
+                                            Catálogo NodosP Sistema Eléctrico Nacional (v2026-08-19)                               
+                                            </td>                                    
+                                            <td style="text-align: center; width: 10%; ">
+                                                <a href="/Docs/01_MECP/CatalogoNodosP/2026/Catálogo NodosP Sistema Eléctrico Nacional (v2026-08-19).xlsx" target="_blank">
+                                                <img alt="Excel" src="/images/iconos/xlsx.png " class="icono32" />
+                                                </a>
+                                            </td>
+                                            <td style="text-align: center; width: 30%; ">
+                                                18/08/2026
+                                            </td>
+                                        </tr>
+                                            
+                                        <tr>
+                                                                                        <td style="text-align: left; width: 55%; font-size: 14px;">
+                                            Catálogo NodosP Sistema Eléctrico Nacional (v2026-07-16)                               
+                                            </td>                                    
+                                            <td style="text-align: center; width: 10%; ">
+                                                <a href="/Docs/01_MECP/CatalogoNodosP/2026/Catálogo NodosP Sistema Eléctrico Nacional (v2026-07-16).xlsx" target="_blank">
+                                                <img alt="Excel" src="/images/iconos/xlsx.png " class="icono32" />
+                                                </a>
+                                            </td>
+                                            <td style="text-align: center; width: 30%; ">
+                                                17/07/2026
+                                            </td>
+                                        </tr>
+                                            
+                                        <tr>
+                                                                                        <td style="text-align: left; width: 55%; font-size: 14px;">
+                                            Catálogo NodosP Sistema Eléctrico Nacional (v2026-06-23)                               
+                                            </td>                                    
+                                            <td style="text-align: center; width: 10%; ">
+                                                <a href="/Docs/01_MECP/CatalogoNodosP/2026/Catálogo NodosP Sistema Eléctrico Nacional (v2026-06-23).xlsx" target="_blank">
+                                                <img alt="Excel" src="/images/iconos/xlsx.png " class="icono32" />
+                                                </a>
+                                            </td>
+                                            <td style="text-align: center; width: 30%; ">
+                                                24/06/2026
+                                            </td>
+                                        </tr>
+                                            
+                                        <tr>
+                                                                                        <td style="text-align: left; width: 55%; font-size: 14px;">
+                                            Catálogo NodosP Sistema Eléctrico Nacional (v2026-05-20)                               
+                                            </td>                                    
+                                            <td style="text-align: center; width: 10%; ">
+                                                <a href="/Docs/01_MECP/CatalogoNodosP/2026/Catálogo NodosP Sistema Eléctrico Nacional (v2026-05-20).xlsx" target="_blank">
+                                                <img alt="Excel" src="/images/iconos/xlsx.png " class="icono32" />
+                                                </a>
+                                            </td>
+                                            <td style="text-align: center; width: 30%; ">
+                                                22/05/2026
+                                            </td>
+                                        </tr>
+                                            
+                                        <tr>
+                                                                                        <td style="text-align: left; width: 55%; font-size: 14px;">
+                                            Catálogo NodosP Sistema Eléctrico Nacional (v2026-04-23)                               
+                                            </td>                                    
+                                            <td style="text-align: center; width: 10%; ">
+                                                <a href="/Docs/01_MECP/CatalogoNodosP/2026/Catálogo NodosP Sistema Eléctrico Nacional (v2026-04-23).xlsx" target="_blank">
+                                                <img alt="Excel" src="/images/iconos/xlsx.png " class="icono32" />
+                                                </a>
+                                            </td>
+                                            <td style="text-align: center; width: 30%; ">
+                                                23/04/2026
+                                            </td>
+                                        </tr>
+                                            
+                                        <tr>
+                                                                                        <td style="text-align: left; width: 55%; font-size: 14px;">
+                                            Catálogo NodosP Sistema Eléctrico Nacional (v2026-03-19)                               
+                                            </td>                                    
+                                            <td style="text-align: center; width: 10%; ">
+                                                <a href="/Docs/01_MECP/CatalogoNodosP/2026/Catálogo NodosP Sistema Eléctrico Nacional (v2026-03-19).xlsx" target="_blank">
+                                                <img alt="Excel" src="/images/iconos/xlsx.png " class="icono32" />
+                                                </a>
+                                            </td>
+                                            <td style="text-align: center; width: 30%; ">
+                                                18/03/2026
+                                            </td>
+                                        </tr>
+                                            
+                                        <tr>
+                                                                                        <td style="text-align: left; width: 55%; font-size: 14px;">
+                                            Catálogo NodosP Sistema Eléctrico Nacional (v2026-02-18)                               
+                                            </td>                                    
+                                            <td style="text-align: center; width: 10%; ">
+                                                <a href="/Docs/01_MECP/CatalogoNodosP/2026/Catálogo NodosP Sistema Eléctrico Nacional (v2026-02-18).xlsx" target="_blank">
+                                                <img alt="Excel" src="/images/iconos/xlsx.png " class="icono32" />
+                                                </a>
+                                            </td>
+                                            <td style="text-align: center; width: 30%; ">
+                                                18/02/2026
+                                            </td>
+                                        </tr>
+                                            
+                                        <tr>
+                                                                                        <td style="text-align: left; width: 55%; font-size: 14px;">
+                                            Catálogo NodosP Sistema Eléctrico Nacional (v2026-01-15)                               
+                                            </td>                                    
+                                            <td style="text-align: center; width: 10%; ">
+                                                <a href="/Docs/01_MECP/CatalogoNodosP/2026/Catálogo NodosP Sistema Eléctrico Nacional (v2026-01-15).xlsx" target="_blank">
+                                                <img alt="Excel" src="/images/iconos/xlsx.png " class="icono32" />
+                                                </a>
+                                            </td>
+                                            <td style="text-align: center; width: 30%; ">
+                                                16/01/2026
+                                            </td>
+                                        </tr>
+                                            
+                                    </table>
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" columna-2 " style="width:30%; margin-left: 5px; text-align: justify; padding-top: 5px !important; font-size: 14px;">
+                        <p>
+                            El Catálogo de NodosP presenta la descripción de los NodosP y NodosP Distribuidos (Zonas de Carga) definidos por el CENACE. 
+                        </p>
+                        <p>
+                            Un NodoP corresponde a uno o varios nodos de conectividad de la red y en él se modela una inyección o un retiro físico de energía. En cada NodoP se determina 
+                            el precio de la energía para las liquidaciones financieras en el Mercado Eléctrico Mayorista.
+                        </p>
+                    </div>
+                </div>
+            
+        </div>
+    
+
+            </div>
+            <script src="/scripts/funciones.js" type="text/javascript"></script>
+            <script type="text/javascript" src="/scripts/classie.js"></script>
+            <script type="text/javascript">
+                var buttons7Click = Array.prototype.slice.call(document.querySelectorAll('#btn-click a')),
+                    totalButtons7Click = buttons7Click.length;
+
+                buttons7Click.forEach(function (el, i) { el.addEventListener('click', activate, false); });
+
+                function activate() {
+                    var self = this, activatedClass = 'btn-activated';
+
+                    if (!classie.has(this, activatedClass)) {
+                        classie.add(this, activatedClass);
+                        setTimeout(function () { classie.remove(self, activatedClass) }, 1000);
+                    }
+                }
+
+            </script>
+              <div style="height: 50px;">&nbsp;</div>
+        </form>
+
+<script src="https://framework-gb.cdn.gob.mx/gobmx.js"></script>
+<script src="https://framework-gb.cdn.gob.mx/assets/scripts/jquery-ui-datepicker.js"></script>
+</body>
+</html>
+<!--[if IE lte 9]>      
+<style>
+    head:first-child + body div[class].tableContainer {
+        height: 255px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        width: 740px;
+    }
+    head:first-child + body tbody[class].scrollContent {
+    height: 0px;
+    }   
+ </style>
+<![endif] -->

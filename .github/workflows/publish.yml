@@ -1,0 +1,85 @@
+name: Publicar edarji.net y actualizar MEM diario
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    # 07:17 Ciudad de México (UTC-6). GitHub puede retrasar la ejecución.
+    - cron: '17 13 * * *'
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Pruebas de importación
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Actualizar demanda, PML y generación
+        id: official
+        continue-on-error: true
+        run: python pipeline/fetch_official.py
+      - name: Actualizar mapa del día y nodos de 400 kV
+        id: map
+        continue-on-error: true
+        run: python pipeline/build_price_map.py
+      - name: Guardar último conjunto de datos
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add mem-monitor/data/monitor.json mem-monitor/data/price-map.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Actualizar datos diarios CENACE'
+            git push
+          fi
+      - name: Preparar archivos públicos
+        run: |
+          mkdir -p _site
+          cp index.html styles.css script.js CNAME _site/
+          cp -R assets mem-monitor _site/
+          touch _site/.nojekyll
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Guardar evidencia de descarga
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cenace-evidence
+          path: |
+            pipeline/raw/
+            pipeline/map-source/
+          retention-days: 14
+      - name: Registrar resultado de fuentes
+        run: |
+          echo '### Actualización diaria CENACE' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Demanda/PML/generación: ${{ steps.official.outcome }}' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Mapa: ${{ steps.map.outcome }}' >> "$GITHUB_STEP_SUMMARY"
+    outputs:
+      official: ${{ steps.official.outcome }}
+      map: ${{ steps.map.outcome }}
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publicar en GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+      - name: Señalar fallos de fuentes después de publicar datos válidos
+        if: needs.build.outputs.official == 'failure' || needs.build.outputs.map == 'failure'
+        run: |
+          echo 'Una fuente falló. Se publicaron los datos válidos conservados con sus fechas. Revisar evidencia.'
+          exit 1

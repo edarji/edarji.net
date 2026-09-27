@@ -1,0 +1,25 @@
+{
+  "fetched_at": "2026-09-27T17:11:00.742386+00:00",
+  "evidence": [
+    {
+      "file": "demand.html",
+      "url": "https://www.cenace.gob.mx/graficademanda.aspx",
+      "sha256": "330dd8664c6144be78f684f3f99a1391f7ddcbe1f661116e27c2eaa1362f8216"
+    },
+    {
+      "file": "pml.json",
+      "url": "https://ws01.cenace.gob.mx:8082/SWPML/SIM/SIN/MDA/01PLO-115/2026/09/27/2026/09/27/JSON",
+      "sha256": "d7690d485a1ff2f674f8d652a1ae4ff059c943fadc7838241618291138dff067"
+    },
+    {
+      "file": "generation-page.html",
+      "url": "https://www.cenace.gob.mx/Paginas/SIM/Reportes/EnergiaGeneradaTipoTec.aspx",
+      "sha256": "5f797ddb60fcc6980bb9c9d5d2d8e5a61de9213fc1e151fb857a5d1ed388ccb8"
+    },
+    {
+      "file": "generation.csv",
+      "url": "https://www.cenace.gob.mx/Paginas/SIM/Reportes/EnergiaGeneradaTipoTec.aspx",
+      "sha256": "51c24e91ce07bbd26efad0cc685fb693f721589f290ed0574da83dd7ef387fe2"
+    }
+  ]
+}

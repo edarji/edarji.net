@@ -191,3 +191,6 @@ Ante fallos de fuentes, conserva datos válidos, muestra sus fechas y marca el w
 como fallido después del despliegue. Las notificaciones dependen de los ajustes de GitHub.
 
 GitHub Pages debe usar la fuente **GitHub Actions**; el dominio sigue siendo edarji.net.
+
+### Identidad visual
+La portada, el monitor y el mapa comparten una composición editorial con la paleta original negro, crema y dorado. Los títulos de los módulos aluden al jazz; los subtítulos conservan el nombre técnico, las unidades y la cobertura del indicador. El símbolo azul es un diseño propio.

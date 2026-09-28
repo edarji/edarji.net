@@ -27,12 +27,12 @@
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
-  <body>
+  <body class="landing-page">
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
     <header class="site-header" data-header>
       <a class="brand" href="#inicio" aria-label="Eduardo ArJi, inicio">
-        <span>EA</span><i aria-hidden="true"></i>
+        <span>Eduardo ArJi</span><i aria-hidden="true"></i>
       </a>
 
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
@@ -79,7 +79,11 @@
           </figcaption>
         </figure>
 
-        <p class="scroll-cue" aria-hidden="true"><span></span> Desplázate para explorar</p>
+        <div class="hero-topics" aria-label="Explora el sitio">
+          <a href="mem-monitor/"><small>ENERGÍA / DATOS OFICIALES</small><strong>MEM Monitor</strong><span>Explorar el mercado eléctrico <b aria-hidden="true">↗</b></span></a>
+          <a href="#intereses"><small>TECNOLOGÍA / APRENDIZAJE</small><strong>Ideas que toman forma</strong><span>Proyectos y experimentos <b aria-hidden="true">↗</b></span></a>
+          <a href="#sobre-mi"><small>MÚSICA / CURIOSIDAD</small><strong>Una forma de mirar</strong><span>Conoce mi historia <b aria-hidden="true">↗</b></span></a>
+        </div>
       </section>
 
       <section id="sobre-mi" class="about section-shell" aria-labelledby="about-title">

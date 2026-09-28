@@ -14,7 +14,8 @@ await page.locator('#node-search').fill('Escobedo');assert.match(await page.loca
 await page.locator('#clear-state').click();await page.locator('#node-search').fill('Valladolid');assert.match(await page.locator('#node-rows').innerText(),/08RMV-400/);
 await page.locator('#node-search').fill('no-existe-123');assert.equal(await page.locator('#node-rows tr').count(),0);
 await page.locator('#node-search').fill('');await page.selectOption('#voltage-filter','all');await page.selectOption('#system-filter','BCS');assert.match(await page.locator('#map-coverage').innerText(),/31 nodos/);
-await page.selectOption('#system-filter','all');for(const width of [390,320]){await page.setViewportSize({width,height:844});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));}
+await page.selectOption('#system-filter','all');for(const width of [390,320]){await page.setViewportSize({width,height:844});
+      await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));}
 await page.setViewportSize({width:390,height:844});await page.screenshot({path:'/tmp/mem-map-mobile.png',fullPage:true});
 await page.route('**/price-map.json',r=>r.fulfill({status:503,body:'Unavailable'}));await page.reload();await page.locator('#map-retry').waitFor();assert(await page.locator('#map-content').isHidden());
 await page.unroute('**/price-map.json');await page.locator('#map-retry').click();await page.locator('#map-content').waitFor();assert.deepEqual(errors,[]);

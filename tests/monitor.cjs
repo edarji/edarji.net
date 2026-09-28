@@ -18,6 +18,7 @@ const fs = require('node:fs');
     await page.screenshot({path:'/tmp/mem-blue-desktop.png',fullPage:true});
     for(const width of [390,320]) {
       await page.setViewportSize({width,height:844});
+      await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
       assert(await page.evaluate(()=>document.documentElement.scrollWidth <= innerWidth));
     }
     await page.setViewportSize({width:390,height:844});

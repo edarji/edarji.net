@@ -45,7 +45,7 @@ jobs:
         run: |
           mkdir -p _site
           cp index.html styles.css script.js CNAME _site/
-          cp -R assets mem-monitor _site/
+          cp -R assets mem-monitor mercados _site/
           touch _site/.nojekyll
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

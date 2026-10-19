@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0b0b" />
+    <meta
+      name="description"
+      content="Electricity Markets Monitor: un proyecto de Eduardo Arriola para explorar los mercados eléctricos mediante datos públicos y herramientas de análisis."
+    />
+    <meta name="author" content="Eduardo Arriola" />
+    <meta property="og:title" content="Electricity Markets Monitor | Eduardo Arriola" />
+    <meta
+      property="og:description"
+      content="Un proyecto para explorar los mercados eléctricos mediante datos públicos y herramientas de análisis."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://edarji.net/mercados/" />
+    <meta property="og:image" content="https://edarji.net/assets/eduardo-saxofon.jpeg" />
+    <title>Electricity Markets Monitor | Eduardo Arriola</title>
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+  </head>
+  <body class="markets-page">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="../" aria-label="Eduardo Arriola, inicio">
+        <span>Eduardo Arriola</span><i aria-hidden="true"></i>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Abrir menú</span>
+        <span></span><span></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Navegación principal">
+        <a href="../">Inicio</a>
+        <a href="./" aria-current="page">Mercados</a>
+        <a href="../#sobre-mi">Sobre mí</a>
+        <a href="../#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main id="contenido" class="section-shell markets">
+      <section class="markets-intro" aria-labelledby="markets-title">
+        <p class="eyebrow"><span></span> Mercados eléctricos · Datos públicos</p>
+        <h1 id="markets-title">Electricity Markets <em>Monitor.</em></h1>
+        <p class="markets-lead">
+          Un proyecto para explorar los mercados eléctricos mediante datos públicos y herramientas
+          de análisis. El desarrollo comienza en México, con una evolución prevista hacia Guatemala
+          y Centroamérica.
+        </p>
+      </section>
+
+      <section class="markets-tools" aria-labelledby="tools-title">
+        <p class="section-number" id="tools-title">Herramientas</p>
+        <div class="featured-card">
+          <div class="featured-main">
+            <p class="card-kicker">Primer desarrollo</p>
+            <h2>PML Explorer</h2>
+            <p>Análisis histórico de precios marginales locales del mercado eléctrico mexicano.</p>
+            <span class="status-badge">En desarrollo</span>
+          </div>
+          <div class="featured-tool">
+            <p class="card-kicker">Disponible · Versión anterior</p>
+            <h3>MEM Monitor</h3>
+            <p>
+              Demanda SIN, precios marginales locales y generación por tecnología, con datos
+              oficiales de CENACE.
+            </p>
+            <a class="text-link" href="../mem-monitor/">Abrir MEM Monitor <span>→</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer section-shell">
+      <a class="brand" href="../" aria-label="Volver al inicio"><span>EA</span><i></i></a>
+      <p>© <span data-year></span> Eduardo Arriola</p>
+      <p>Hecho con curiosidad y ritmo.</p>
+    </footer>
+  </body>
+</html>

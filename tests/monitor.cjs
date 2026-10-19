@@ -50,7 +50,7 @@ const fs = require('node:fs');
     assert.match(await page.locator('#pml-value').innerText(),/-20/);
     await page.unroute('**/data/monitor.json');
     await page.setViewportSize({width:1440,height:1100});
-    await page.goto(new URL('../',base).href);await page.locator('.site-nav a[href="mem-monitor/"]').click();await page.locator('#dashboard').waitFor();
+    await page.goto(new URL('../mercados/',base).href);await page.locator('a[href="../mem-monitor/"]').click();await page.locator('#dashboard').waitFor();
     assert.deepEqual(errors,[]);
     console.log('PASS: CENACE modules, source links, monthly units, mobile 320/390, stale, unavailable, invalid, HTTP failure/retry, negative PML, node selector, homepage.');
   } finally { await browser.close(); }

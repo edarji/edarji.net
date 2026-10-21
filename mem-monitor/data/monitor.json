@@ -2,25 +2,25 @@
   "schema_version": 2,
   "mode": "official",
   "timezone": "America/Mexico_City",
-  "generated_at": "2026-10-20T18:01:08.242831+00:00",
+  "generated_at": "2026-10-21T18:06:34.021968+00:00",
   "demand": {
     "system": "SIN",
     "unit": "MW",
     "series": [
       {
-        "timestamp": "2026-10-20T12:00:34-06:00",
-        "value": 38881.0
+        "timestamp": "2026-10-21T12:02:57-06:00",
+        "value": 39452.0
       }
     ],
-    "period": "2026-10-20",
+    "period": "2026-10-21",
     "source": {
       "name": "CENACE · Demanda neta indicativa",
       "url": "https://www.cenace.gob.mx/graficademanda.aspx"
     },
     "stale_after_hours": 2,
     "status": "official",
-    "fetched_at": "2026-10-20T18:01:08.242831+00:00",
-    "last_attempt_at": "2026-10-20T18:01:08.242831+00:00",
+    "fetched_at": "2026-10-21T18:06:34.021968+00:00",
+    "last_attempt_at": "2026-10-21T18:06:34.021968+00:00",
     "error": null
   },
   "pml": {
@@ -37,99 +37,99 @@
         "series": [
           {
             "hour": 1,
-            "value": 580.83
+            "value": 667.39
           },
           {
             "hour": 2,
-            "value": 515.55
+            "value": 543.43
           },
           {
             "hour": 3,
-            "value": 485.99
+            "value": 493.61
           },
           {
             "hour": 4,
-            "value": 472.85
+            "value": 486.25
           },
           {
             "hour": 5,
-            "value": 470.46
+            "value": 477.49
           },
           {
             "hour": 6,
-            "value": 486.02
+            "value": 488.94
           },
           {
             "hour": 7,
-            "value": 536.03
+            "value": 576.4
           },
           {
             "hour": 8,
-            "value": 478.72
+            "value": 501.45
           },
           {
             "hour": 9,
-            "value": 447.5
+            "value": 461.81
           },
           {
             "hour": 10,
-            "value": 420.52
+            "value": 447.85
           },
           {
             "hour": 11,
-            "value": 435.87
+            "value": 443.51
           },
           {
             "hour": 12,
-            "value": 425.38
+            "value": 438.84
           },
           {
             "hour": 13,
-            "value": 442.47
+            "value": 443.95
           },
           {
             "hour": 14,
-            "value": 453.28
+            "value": 510.1
           },
           {
             "hour": 15,
-            "value": 522.9
+            "value": 522.55
           },
           {
             "hour": 16,
-            "value": 541.67
+            "value": 713.46
           },
           {
             "hour": 17,
-            "value": 530.36
+            "value": 730.99
           },
           {
             "hour": 18,
-            "value": 702.86
+            "value": 1035.74
           },
           {
             "hour": 19,
-            "value": 1637.54
+            "value": 2073.16
           },
           {
             "hour": 20,
-            "value": 1620.27
+            "value": 1857.66
           },
           {
             "hour": 21,
-            "value": 939.86
+            "value": 1305.65
           },
           {
             "hour": 22,
-            "value": 1008.04
+            "value": 1223.51
           },
           {
             "hour": 23,
-            "value": 994.09
+            "value": 1396.22
           },
           {
             "hour": 24,
-            "value": 651.52
+            "value": 913.72
           }
         ]
       },
@@ -142,99 +142,99 @@
         "series": [
           {
             "hour": 1,
-            "value": 642.46
+            "value": 656.5
           },
           {
             "hour": 2,
-            "value": 556.82
+            "value": 586.8
           },
           {
             "hour": 3,
-            "value": 527.55
+            "value": 535.24
           },
           {
             "hour": 4,
-            "value": 513.66
+            "value": 526.79
           },
           {
             "hour": 5,
-            "value": 510.88
+            "value": 516.89
           },
           {
             "hour": 6,
-            "value": 525.79
+            "value": 525.92
           },
           {
             "hour": 7,
-            "value": 572.82
+            "value": 617.74
           },
           {
             "hour": 8,
-            "value": 522.72
+            "value": 541.01
           },
           {
             "hour": 9,
-            "value": 496.12
+            "value": 511.14
           },
           {
             "hour": 10,
-            "value": 464.0
+            "value": 496.05
           },
           {
             "hour": 11,
-            "value": 482.91
+            "value": 492.59
           },
           {
             "hour": 12,
-            "value": 486.94
+            "value": 488.99
           },
           {
             "hour": 13,
-            "value": 524.34
+            "value": 492.7
           },
           {
             "hour": 14,
-            "value": 536.11
+            "value": 540.97
           },
           {
             "hour": 15,
-            "value": 654.69
+            "value": 727.49
           },
           {
             "hour": 16,
-            "value": 686.73
+            "value": 907.19
           },
           {
             "hour": 17,
-            "value": 696.91
+            "value": 847.87
           },
           {
             "hour": 18,
-            "value": 988.22
+            "value": 1106.12
           },
           {
             "hour": 19,
-            "value": 1784.88
+            "value": 2243.91
           },
           {
             "hour": 20,
-            "value": 1771.49
+            "value": 2000.38
           },
           {
             "hour": 21,
-            "value": 1010.53
+            "value": 1302.38
           },
           {
             "hour": 22,
-            "value": 1240.48
+            "value": 1269.12
           },
           {
             "hour": 23,
-            "value": 1084.91
+            "value": 1259.76
           },
           {
             "hour": 24,
-            "value": 648.24
+            "value": 856.08
           }
         ]
       },
@@ -247,112 +247,112 @@
         "series": [
           {
             "hour": 1,
-            "value": 796.17
+            "value": 1290.93
           },
           {
             "hour": 2,
-            "value": 674.08
+            "value": 708.76
           },
           {
             "hour": 3,
-            "value": 628.87
+            "value": 635.54
           },
           {
             "hour": 4,
-            "value": 601.34
+            "value": 615.02
           },
           {
             "hour": 5,
-            "value": 591.6
+            "value": 597.14
           },
           {
             "hour": 6,
-            "value": 602.02
+            "value": 602.84
           },
           {
             "hour": 7,
-            "value": 646.66
+            "value": 701.28
           },
           {
             "hour": 8,
-            "value": 598.66
+            "value": 619.25
           },
           {
             "hour": 9,
-            "value": 571.68
+            "value": 588.11
           },
           {
             "hour": 10,
-            "value": 544.03
+            "value": 573.08
           },
           {
             "hour": 11,
-            "value": 567.43
+            "value": 570.09
           },
           {
             "hour": 12,
-            "value": 580.17
+            "value": 651.24
           },
           {
             "hour": 13,
-            "value": 612.96
+            "value": 774.33
           },
           {
             "hour": 14,
-            "value": 630.18
+            "value": 919.39
           },
           {
             "hour": 15,
-            "value": 1339.33
+            "value": 1861.03
           },
           {
             "hour": 16,
-            "value": 1372.73
+            "value": 2002.57
           },
           {
             "hour": 17,
-            "value": 1375.82
+            "value": 2014.9
           },
           {
             "hour": 18,
-            "value": 2266.03
+            "value": 2876.82
           },
           {
             "hour": 19,
-            "value": 2170.03
+            "value": 2643.06
           },
           {
             "hour": 20,
-            "value": 2108.32
+            "value": 2432.55
           },
           {
             "hour": 21,
-            "value": 1567.05
+            "value": 2205.62
           },
           {
             "hour": 22,
-            "value": 4197.45
+            "value": 1960.28
           },
           {
             "hour": 23,
-            "value": 4192.71
+            "value": 3109.38
           },
           {
             "hour": 24,
-            "value": 1275.79
+            "value": 1909.46
           }
         ]
       }
     ],
-    "period": "2026-10-20",
+    "period": "2026-10-21",
     "source": {
       "name": "CENACE · Reporte horario MDA",
       "url": "https://www.cenace.gob.mx/Paginas/SIM/Reportes/PreEnerServConMDA.aspx"
     },
     "stale_after_hours": 30,
     "status": "official",
-    "fetched_at": "2026-10-20T18:01:09.790125+00:00",
-    "last_attempt_at": "2026-10-20T18:01:09.790125+00:00",
+    "fetched_at": "2026-10-21T18:06:50.772401+00:00",
+    "last_attempt_at": "2026-10-21T18:06:50.772401+00:00",
     "error": null
   },
   "generation": {
@@ -414,8 +414,8 @@
     "liquidation": "Original (L0)",
     "published_label": "14/oct/2026 05:00:01 hrs.",
     "status": "official",
-    "fetched_at": "2026-10-20T18:01:08.242831+00:00",
-    "last_attempt_at": "2026-10-20T18:01:08.242831+00:00",
+    "fetched_at": "2026-10-21T18:06:34.021968+00:00",
+    "last_attempt_at": "2026-10-21T18:06:34.021968+00:00",
     "error": null
   }
 }

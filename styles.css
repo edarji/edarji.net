@@ -261,7 +261,8 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,su
 .markets-tools { margin-top:90px; }
 .markets-tools .section-number { margin:0 0 30px; }
 .markets-tools .featured-main > p:not(.card-kicker) { margin:20px 0 0; }
-.featured-tool .text-link { align-self:flex-start; margin-top:12px; border-color:rgba(11,11,11,.35); }
-.featured-tool .text-link:hover { border-color:var(--ink); }
+.featured-tool .text-link,.featured-main .text-link { align-self:flex-start; margin-top:12px; border-color:rgba(11,11,11,.35); }
+.featured-tool .text-link:hover,.featured-main .text-link:hover { border-color:var(--ink); }
+.featured-main .text-link { display:flex; width:fit-content; margin-top:20px; }
 .site-nav a[aria-current="page"] { color:var(--gold-light); }
 @media(max-width:820px) { .markets { padding-block:120px 75px; } .markets-tools { margin-top:60px; } }

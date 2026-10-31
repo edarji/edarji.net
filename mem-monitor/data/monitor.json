@@ -2,7 +2,7 @@
   "schema_version": 2,
   "mode": "official",
   "timezone": "America/Mexico_City",
-  "generated_at": "2026-10-31T13:57:50.146861+00:00",
+  "generated_at": "2026-10-31T17:48:25.842456+00:00",
   "demand": {
     "system": "SIN",
     "unit": "MW",
@@ -10,6 +10,10 @@
       {
         "timestamp": "2026-10-31T07:56:41-06:00",
         "value": 34256.0
+      },
+      {
+        "timestamp": "2026-10-31T11:45:19-06:00",
+        "value": 36067.0
       }
     ],
     "period": "2026-10-31",
@@ -19,8 +23,8 @@
     },
     "stale_after_hours": 2,
     "status": "official",
-    "fetched_at": "2026-10-31T13:57:50.146861+00:00",
-    "last_attempt_at": "2026-10-31T13:57:50.146861+00:00",
+    "fetched_at": "2026-10-31T17:48:25.842456+00:00",
+    "last_attempt_at": "2026-10-31T17:48:25.842456+00:00",
     "error": null
   },
   "pml": {
@@ -351,8 +355,8 @@
     },
     "stale_after_hours": 30,
     "status": "official",
-    "fetched_at": "2026-10-31T13:57:53.233193+00:00",
-    "last_attempt_at": "2026-10-31T13:57:53.233193+00:00",
+    "fetched_at": "2026-10-31T17:48:29.935099+00:00",
+    "last_attempt_at": "2026-10-31T17:48:29.935099+00:00",
     "error": null
   },
   "generation": {
@@ -414,8 +418,8 @@
     "liquidation": "Original (L0)",
     "published_label": "14/oct/2026 05:00:01 hrs.",
     "status": "official",
-    "fetched_at": "2026-10-31T13:57:50.146861+00:00",
-    "last_attempt_at": "2026-10-31T13:57:50.146861+00:00",
+    "fetched_at": "2026-10-31T17:48:25.842456+00:00",
+    "last_attempt_at": "2026-10-31T17:48:25.842456+00:00",
     "error": null
   }
 }

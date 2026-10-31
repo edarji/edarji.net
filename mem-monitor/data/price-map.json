@@ -3,7 +3,7 @@
   "market": "MDA",
   "unit": "MXN/MWh",
   "date": "2026-10-31",
-  "fetched_at": "2026-10-31T13:57:53.233193+00:00",
+  "fetched_at": "2026-10-31T17:48:29.935099+00:00",
   "default_hour": 24,
   "catalog_url": "https://www.cenace.gob.mx/Docs/01_MECP/CatalogoNodosP/2026/Cat%C3%A1logo%20NodosP%20Sistema%20El%C3%A9ctrico%20Nacional%20%28v2026-10-23%29.xlsx",
   "catalog_version": "2026-10-23",

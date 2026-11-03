@@ -2,7 +2,7 @@
   "schema_version": 2,
   "mode": "official",
   "timezone": "America/Mexico_City",
-  "generated_at": "2026-11-03T20:09:09.637757+00:00",
+  "generated_at": "2026-11-03T20:13:32.944967+00:00",
   "demand": {
     "system": "SIN",
     "unit": "MW",
@@ -10,6 +10,10 @@
       {
         "timestamp": "2026-11-03T14:05:50-06:00",
         "value": 40443.0
+      },
+      {
+        "timestamp": "2026-11-03T14:10:53-06:00",
+        "value": 40402.0
       }
     ],
     "period": "2026-11-03",
@@ -19,8 +23,8 @@
     },
     "stale_after_hours": 2,
     "status": "official",
-    "fetched_at": "2026-11-03T20:09:09.637757+00:00",
-    "last_attempt_at": "2026-11-03T20:09:09.637757+00:00",
+    "fetched_at": "2026-11-03T20:13:32.944967+00:00",
+    "last_attempt_at": "2026-11-03T20:13:32.944967+00:00",
     "error": null
   },
   "pml": {
@@ -343,8 +347,8 @@
     "stale_after_hours": 30,
     "request_url": "https://ws01.cenace.gob.mx:8082/SWPML/SIM/SIN/MDA/06ESC-400,03SAU-400,08RMV-400/2026/11/03/2026/11/03/JSON",
     "status": "official",
-    "fetched_at": "2026-11-03T20:09:09.637757+00:00",
-    "last_attempt_at": "2026-11-03T20:09:09.637757+00:00",
+    "fetched_at": "2026-11-03T20:13:32.944967+00:00",
+    "last_attempt_at": "2026-11-03T20:13:32.944967+00:00",
     "error": null
   },
   "generation": {
@@ -406,8 +410,8 @@
     "liquidation": "Original (L0)",
     "published_label": "14/oct/2026 05:00:01 hrs.",
     "status": "official",
-    "fetched_at": "2026-11-03T20:09:09.637757+00:00",
-    "last_attempt_at": "2026-11-03T20:09:09.637757+00:00",
+    "fetched_at": "2026-11-03T20:13:32.944967+00:00",
+    "last_attempt_at": "2026-11-03T20:13:32.944967+00:00",
     "error": null
   }
 }

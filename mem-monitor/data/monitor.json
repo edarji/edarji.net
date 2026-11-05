@@ -2,25 +2,25 @@
   "schema_version": 2,
   "mode": "official",
   "timezone": "America/Mexico_City",
-  "generated_at": "2026-11-04T20:27:13.463436+00:00",
+  "generated_at": "2026-11-05T20:42:04.249185+00:00",
   "demand": {
     "system": "SIN",
     "unit": "MW",
     "series": [
       {
-        "timestamp": "2026-11-04T14:23:23-06:00",
-        "value": 40676.0
+        "timestamp": "2026-11-05T14:38:45-06:00",
+        "value": 41693.0
       }
     ],
-    "period": "2026-11-04",
+    "period": "2026-11-05",
     "source": {
       "name": "CENACE · Demanda neta indicativa",
       "url": "https://www.cenace.gob.mx/graficademanda.aspx"
     },
     "stale_after_hours": 2,
     "status": "official",
-    "fetched_at": "2026-11-04T20:27:13.463436+00:00",
-    "last_attempt_at": "2026-11-04T20:27:13.463436+00:00",
+    "fetched_at": "2026-11-05T20:42:04.249185+00:00",
+    "last_attempt_at": "2026-11-05T20:42:04.249185+00:00",
     "error": null
   },
   "pml": {
@@ -30,329 +30,321 @@
     "nodes": [
       {
         "id": "06ESC-400",
-        "name": "Escobedo",
-        "municipality": "GENERAL ESCOBEDO",
-        "state": "NUEVO LEON",
-        "voltage": 400,
+        "name": "Escobedo · Monterrey",
         "series": [
           {
             "hour": 1,
-            "value": 656.28
+            "value": 461.77
           },
           {
             "hour": 2,
-            "value": 627.31
+            "value": 652.56
           },
           {
             "hour": 3,
-            "value": 477.78
+            "value": 510.27
           },
           {
             "hour": 4,
-            "value": 435.1
+            "value": 479.36
           },
           {
             "hour": 5,
-            "value": 411.79
+            "value": 455.78
           },
           {
             "hour": 6,
-            "value": 401.56
+            "value": 617.07
           },
           {
             "hour": 7,
-            "value": 488.88
+            "value": 705.84
           },
           {
             "hour": 8,
-            "value": 395.61
+            "value": 415.81
           },
           {
             "hour": 9,
-            "value": 351.11
+            "value": 335.67
           },
           {
             "hour": 10,
-            "value": 327.91
+            "value": 297.71
           },
           {
             "hour": 11,
-            "value": 329.17
+            "value": 288.27
           },
           {
             "hour": 12,
-            "value": 319.59
+            "value": 298.61
           },
           {
             "hour": 13,
-            "value": 324.22
+            "value": 323.24
           },
           {
             "hour": 14,
-            "value": 375.18
+            "value": 329.24
           },
           {
             "hour": 15,
-            "value": 435.78
+            "value": 366.85
           },
           {
             "hour": 16,
-            "value": 494.66
+            "value": 399.45
           },
           {
             "hour": 17,
-            "value": 597.6
+            "value": 539.72
           },
           {
             "hour": 18,
-            "value": 2045.28
+            "value": 1132.29
           },
           {
             "hour": 19,
-            "value": 1966.2
+            "value": 1986.59
           },
           {
             "hour": 20,
-            "value": 1878.27
+            "value": 1852.16
           },
           {
             "hour": 21,
-            "value": 1695.89
+            "value": 997.92
           },
           {
             "hour": 22,
-            "value": 1349.58
+            "value": 1041.88
           },
           {
             "hour": 23,
-            "value": 1101.92
+            "value": 704.73
           },
           {
             "hour": 24,
-            "value": 627.17
+            "value": 573.9
           }
         ]
       },
       {
         "id": "03SAU-400",
-        "name": "El Sauz",
-        "municipality": "PEDRO ESCOBEDO",
-        "state": "QUERETARO",
-        "voltage": 400,
+        "name": "El Sauz · Querétaro",
         "series": [
           {
             "hour": 1,
-            "value": 611.96
+            "value": 401.54
           },
           {
             "hour": 2,
-            "value": 443.12
+            "value": 1674.07
           },
           {
             "hour": 3,
-            "value": 356.67
+            "value": 772.93
           },
           {
             "hour": 4,
-            "value": 257.66
+            "value": 713.91
           },
           {
             "hour": 5,
-            "value": 405.47
+            "value": 858.95
           },
           {
             "hour": 6,
-            "value": 390.7
+            "value": 1397.29
           },
           {
             "hour": 7,
-            "value": 491.36
+            "value": 1632.9
           },
           {
             "hour": 8,
-            "value": 400.64
+            "value": 729.05
           },
           {
             "hour": 9,
-            "value": 365.28
+            "value": 346.13
           },
           {
             "hour": 10,
-            "value": 349.36
+            "value": 358.51
           },
           {
             "hour": 11,
-            "value": 342.73
+            "value": 137.57
           },
           {
             "hour": 12,
-            "value": 332.59
+            "value": 133.25
           },
           {
             "hour": 13,
-            "value": 336.9
+            "value": 124.36
           },
           {
             "hour": 14,
-            "value": 289.56
+            "value": 164.5
           },
           {
             "hour": 15,
-            "value": 309.75
+            "value": 301.03
           },
           {
             "hour": 16,
-            "value": 337.47
+            "value": 302.03
           },
           {
             "hour": 17,
-            "value": 851.08
+            "value": 492.41
           },
           {
             "hour": 18,
-            "value": 3241.87
+            "value": 1377.76
           },
           {
             "hour": 19,
-            "value": 3440.34
+            "value": 3180.42
           },
           {
             "hour": 20,
-            "value": 4067.34
+            "value": 1740.32
           },
           {
             "hour": 21,
-            "value": 2740.07
+            "value": 1253.56
           },
           {
             "hour": 22,
-            "value": 2819.07
+            "value": 1135.75
           },
           {
             "hour": 23,
-            "value": 1434.53
+            "value": 1012.53
           },
           {
             "hour": 24,
-            "value": 832.95
+            "value": 735.32
           }
         ]
       },
       {
         "id": "08RMV-400",
-        "name": "Riviera Maya-Valladolid",
-        "municipality": "VALLADOLID",
-        "state": "YUCATAN",
-        "voltage": 400,
+        "name": "Riviera Maya-Valladolid · Yucatán",
         "series": [
           {
             "hour": 1,
-            "value": 2847.48
+            "value": 2545.67
           },
           {
             "hour": 2,
-            "value": 2810.95
+            "value": 2572.89
           },
           {
             "hour": 3,
-            "value": 2488.12
+            "value": 2813.46
           },
           {
             "hour": 4,
-            "value": 1777.62
+            "value": 2415.24
           },
           {
             "hour": 5,
-            "value": 762.37
+            "value": 1240.39
           },
           {
             "hour": 6,
-            "value": 1068.82
+            "value": 2086.39
           },
           {
             "hour": 7,
-            "value": 1012.78
+            "value": 2414.07
           },
           {
             "hour": 8,
-            "value": 692.93
+            "value": 989.82
           },
           {
             "hour": 9,
-            "value": 601.19
+            "value": 1446.45
           },
           {
             "hour": 10,
-            "value": 550.85
+            "value": 3943.9
           },
           {
             "hour": 11,
-            "value": 533.79
+            "value": 3151.29
           },
           {
             "hour": 12,
-            "value": 499.26
+            "value": 4086.56
           },
           {
             "hour": 13,
-            "value": 510.17
+            "value": 4163.56
           },
           {
             "hour": 14,
-            "value": 766.83
+            "value": 4166.04
           },
           {
             "hour": 15,
-            "value": 982.99
+            "value": 2915.74
           },
           {
             "hour": 16,
-            "value": 1688.93
+            "value": 1285.72
           },
           {
             "hour": 17,
-            "value": 2824.91
+            "value": 3152.42
           },
           {
             "hour": 18,
-            "value": 5801.52
+            "value": 3160.73
           },
           {
             "hour": 19,
-            "value": 3609.65
+            "value": 6127.01
           },
           {
             "hour": 20,
-            "value": 5792.96
+            "value": 5260.31
           },
           {
             "hour": 21,
-            "value": 4587.83
+            "value": 4324.62
           },
           {
             "hour": 22,
-            "value": 4022.5
+            "value": 3553.49
           },
           {
             "hour": 23,
-            "value": 4950.12
+            "value": 2959.96
           },
           {
             "hour": 24,
-            "value": 2673.58
+            "value": 2898.95
           }
         ]
       }
     ],
-    "period": "2026-11-04",
+    "period": "2026-11-05",
     "source": {
-      "name": "CENACE · Reporte horario MDA",
-      "url": "https://www.cenace.gob.mx/Paginas/SIM/Reportes/PreEnerServConMDA.aspx"
+      "name": "CENACE · SW-PML",
+      "url": "https://www.cenace.gob.mx/DocsMEM/2020-01-14%20Manual%20T%C3%A9cnico%20SW-PML.pdf"
     },
     "stale_after_hours": 30,
+    "request_url": "https://ws01.cenace.gob.mx:8082/SWPML/SIM/SIN/MDA/06ESC-400,03SAU-400,08RMV-400/2026/11/05/2026/11/05/JSON",
     "status": "official",
-    "fetched_at": "2026-11-04T20:27:14.844376+00:00",
-    "last_attempt_at": "2026-11-04T20:27:14.844376+00:00",
+    "fetched_at": "2026-11-05T20:42:04.249185+00:00",
+    "last_attempt_at": "2026-11-05T20:42:04.249185+00:00",
     "error": null
   },
   "generation": {
@@ -414,8 +406,8 @@
     "liquidation": "Original (L0)",
     "published_label": "14/oct/2026 05:00:01 hrs.",
     "status": "official",
-    "fetched_at": "2026-11-04T20:27:13.463436+00:00",
-    "last_attempt_at": "2026-11-04T20:27:13.463436+00:00",
+    "fetched_at": "2026-11-05T20:42:04.249185+00:00",
+    "last_attempt_at": "2026-11-05T20:42:04.249185+00:00",
     "error": null
   }
 }

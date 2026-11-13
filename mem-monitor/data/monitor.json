@@ -2,7 +2,7 @@
   "schema_version": 2,
   "mode": "official",
   "timezone": "America/Mexico_City",
-  "generated_at": "2026-11-13T18:16:14.581722+00:00",
+  "generated_at": "2026-11-13T20:30:57.377976+00:00",
   "demand": {
     "system": "SIN",
     "unit": "MW",
@@ -10,6 +10,10 @@
       {
         "timestamp": "2026-11-13T12:14:12-06:00",
         "value": 37642.0
+      },
+      {
+        "timestamp": "2026-11-13T14:30:45-06:00",
+        "value": 38704.0
       }
     ],
     "period": "2026-11-13",
@@ -19,8 +23,8 @@
     },
     "stale_after_hours": 2,
     "status": "official",
-    "fetched_at": "2026-11-13T18:16:14.581722+00:00",
-    "last_attempt_at": "2026-11-13T18:16:14.581722+00:00",
+    "fetched_at": "2026-11-13T20:30:57.377976+00:00",
+    "last_attempt_at": "2026-11-13T20:30:57.377976+00:00",
     "error": null
   },
   "pml": {
@@ -30,10 +34,7 @@
     "nodes": [
       {
         "id": "06ESC-400",
-        "name": "Escobedo",
-        "municipality": "GENERAL ESCOBEDO",
-        "state": "NUEVO LEON",
-        "voltage": 400,
+        "name": "Escobedo · Monterrey",
         "series": [
           {
             "hour": 1,
@@ -135,10 +136,7 @@
       },
       {
         "id": "03SAU-400",
-        "name": "El Sauz",
-        "municipality": "PEDRO ESCOBEDO",
-        "state": "QUERETARO",
-        "voltage": 400,
+        "name": "El Sauz · Querétaro",
         "series": [
           {
             "hour": 1,
@@ -240,10 +238,7 @@
       },
       {
         "id": "08RMV-400",
-        "name": "Riviera Maya-Valladolid",
-        "municipality": "VALLADOLID",
-        "state": "YUCATAN",
-        "voltage": 400,
+        "name": "Riviera Maya-Valladolid · Yucatán",
         "series": [
           {
             "hour": 1,
@@ -346,13 +341,14 @@
     ],
     "period": "2026-11-13",
     "source": {
-      "name": "CENACE · Reporte horario MDA",
-      "url": "https://www.cenace.gob.mx/Paginas/SIM/Reportes/PreEnerServConMDA.aspx"
+      "name": "CENACE · SW-PML",
+      "url": "https://www.cenace.gob.mx/DocsMEM/2020-01-14%20Manual%20T%C3%A9cnico%20SW-PML.pdf"
     },
     "stale_after_hours": 30,
+    "request_url": "https://ws01.cenace.gob.mx:8082/SWPML/SIM/SIN/MDA/06ESC-400,03SAU-400,08RMV-400/2026/11/13/2026/11/13/JSON",
     "status": "official",
-    "fetched_at": "2026-11-13T18:16:22.056699+00:00",
-    "last_attempt_at": "2026-11-13T18:16:22.056699+00:00",
+    "fetched_at": "2026-11-13T20:30:57.377976+00:00",
+    "last_attempt_at": "2026-11-13T20:30:57.377976+00:00",
     "error": null
   },
   "generation": {
@@ -414,8 +410,8 @@
     "liquidation": "Original (L0)",
     "published_label": "14/oct/2026 05:00:01 hrs.",
     "status": "official",
-    "fetched_at": "2026-11-13T18:16:14.581722+00:00",
-    "last_attempt_at": "2026-11-13T18:16:14.581722+00:00",
+    "fetched_at": "2026-11-13T20:30:57.377976+00:00",
+    "last_attempt_at": "2026-11-13T20:30:57.377976+00:00",
     "error": null
   }
 }

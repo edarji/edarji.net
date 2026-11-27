@@ -214,6 +214,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,su
 .featured { padding-block:110px 0; }
 .featured .section-number { margin:0 0 30px; }
 .featured-card { display:grid; grid-template-columns:1.4fr 1fr; background:var(--gold); color:var(--ink); }
+.featured-card + .featured-card { margin-top:24px; }
 .featured-main { padding:48px; }
 .featured-card .card-kicker { color:#3f321c; }
 .featured-card h2 { font-size:clamp(38px,4.4vw,60px); }
